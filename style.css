@@ -57,12 +57,16 @@ h2, h3, h3 {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
 }
 
 img {
   height: 370px;
-  width: 50%;
+  width: 45%;
 }
 
 ul.skills-list {
@@ -75,15 +79,14 @@ ul.skills-list {
 }
 
 .section-narrow {
-max-width: 60%;
-display:flex;
-flex-direction: column;
-margin: 0 auto;
-
+  max-width: 45%;
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 8rem 0;
 }
 
 .section-wide {
-  display:flex;
   max-width: 75%;
   margin: 0 auto;
   padding: 8rem 0;
@@ -94,6 +97,12 @@ header {
   justify-content: space-between;
   padding: 1.2rem;
   height: 15vh;
+}
+
+.name {
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  letter-spacing: -2px;
 }
 
 .home {
@@ -119,10 +128,17 @@ header {
   top: 20%;
 }
 
+.projects {
+  background-color: rgba(147, 147, 187, 0.35); 
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
 .project {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 0;
 }
 
 .project-info {
@@ -134,8 +150,44 @@ header {
 
 .contact-container {
   background-color: #F7F7F7;
+  padding: 5rem;
 }
 
 .contact-details {
   display: flex;
+  justify-content: space-between ;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info>li {
+  padding: 0.2rem 0;
+}
+
+.input-super-group {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.4em;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 300px;
+}
+
+label {
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+textarea {
+  width: 640px;
+  height: 240px;
 }
