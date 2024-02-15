@@ -11,73 +11,74 @@
     <header>
         <div class="logo-section">
             <span class="name">Michał Łazicki</span>
-            <span class="title">^Portfolio^</span>
+            <span class="subtitle">^Portfolio^</span>
         </div>
         <form action="">bright/dark</form>
     </header>
     <main>
-        <section class="home">
-            <h1 class="title">Front end developer making <italic>digital experiences</italic> come to life</h1>
+        <section class="home section-narrow">
+            <h1 class="title">Front end developer<br/>making <i>digital experiences</i><br/>come to life</h1>
             <p class="home-background">WebDev</p>
         </section>
-        <section class="about section">
-            <h2 class="about-heading">Introbuction</h2>
+        <section class="about section section-narrow">
+            <h2 class="about-heading">Introduction</h2>
             <p class="introduction-body">
                 Welcome to my portfolio website.  Front end development is my passions. I enjoy making digital experiences come to life, seamlessly weaving together design and functionality. Willingness to learn and persistence were essential me on the way to  present you with my portfolio.
             </p>
             <p class="introduction-body">A hero front-end developer is the creative architect behind the captivating user interfaces that make digital experiences come to life, seamlessly weaving together design and functionality. Their mastery of HTML, CSS, and JavaScript transforms static concepts into dynamic, user-friendly websites and applications.
             </p>    
         </section>
-        <section class="projects">
+        <section class="projects section-wide" >
             <div class="project">
                 <img src="./placeholder.jpg" alt="">
                 <div class="project-info">
-                    <h2 class="project-title"></h2>
-                    <p class="project-about"></p>
+                    <h2 class="project-title">Project 1</h2>
+                    <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis est consectetur, sint praesentium ab dolorum commodi sapiente ea laboriosam voluptatem velit voluptates? Minima nihil repellendus porro. Architecto non doloremque doloribus.</p>
                 </div>
+            </div>
+            <div class="project">
+                <div class="project-info">
+                    <h2 class="project-title">Project 2</h2>
+                    <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus sequi eius explicabo veniam cupiditate nostrum commodi dicta recusandae molestiae maiores corporis, dolorem, qui iure magnam aut ut id ea.</p>
+                </div>
+                <img src="./placeholder.jpg" alt="">
             </div>
             <div class="project">
                 <img src="./placeholder.jpg" alt="">
                 <div class="project-info">
-                    <h2 class="project-title"></h2>
-                    <p class="project-about"></p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="./placeholder.jpg" alt="">
-                <div class="project-info">
-                    <h2 class="project-title"></h2>
-                    <p class="project-about"></p>
+                    <h2 class="project-title">Project 3</h2>
+                    <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse autem est quidem accusamus incidunt vel reiciendis. Eveniet quam eos officia velit nihil provident, nobis unde consequuntur cum maxime esse tenetur!</p>
                 </div>
             </div>
         </section>
-        <section class="skills">
-            <h2 class="skills-heading"></h2>
-            <p class="skills-about"></p>
+        <section class="skills section-narrow">
+            <h2 class="skills-heading">Skills</h2>
+            <p class="skills-about">Through on line courses and self study I have gained solid understanding of full life cycle of web applications. My skills enable me to deliver enjoyable experiences to users.</p>
             <ul class="skills-list">
-                <li class="sklis-item"></li>
-                <li class="sklis-item"></li>
-                <li class="sklis-item"></li>
-                <li class="sklis-item"></li>
-                <li class="sklis-item"></li>
-                <li class="sklis-item"></li>
+                <li class="sklis-item">Javascript</li>
+                <li class="sklis-item">HTML</li>
+                <li class="sklis-item">CSS</li>
+                <li class="sklis-item">React</li>
+                <li class="sklis-item">Jest</li>
+                <li class="sklis-item">Nodejs</li>
             </ul>
         </section>
-        <section class="contact">
-            <div class="container contact">
+        <section class="contact section-wide">
+            <div class="contact-container">
+                <h2 class="contact-details-title">Contact</h2>
                 <div class="contact-details">
-                    <h3 class="contact-details-title">Contact</h3>
                     <ul class="contact-info">
-                        <li class="contact-item"></li>
-                        <li class="contact-item"></li>
-                        <li class="contact-item"></li>
+                        <li class="contact-item"><a href="" class="email"></a>michal.lazicki@gmail.com</li>
+                        <li class="contact-item">GitHub</li>
+                        <li class="contact-item">Hiroku</li>
                     </ul>
+                    <form action="" method="get">
+                        <label for="name">Name<input type="text" name="name"></label>
+                        <label for="email">Email<input type="email" name="email"></label>
+                        <label for="message">Message<textarea rows="7" cols="15"></textarea></label>
+                    </form>
                 </div>
-                <form action="" method="get">
-                    <label for="name">Name<input type="text" name="name"></label>
-                    <label for="email">Email<input type="email" name="email"></label>
-                    <label for="message">Message<textarea rows="7" cols="15"></textarea></label>
-                </form>
+                
             </div>
         </section>
     </main>

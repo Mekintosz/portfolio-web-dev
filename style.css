@@ -16,6 +16,10 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 img,
@@ -49,19 +53,89 @@ h6 {
   isolation: isolate;
 }
 
-.bitter {
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.space-mono-regular {
+h2, h3, h3 {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
+  margin: 1rem 0;
 }
 
 img {
   height: 370px;
+  width: 50%;
+}
+
+ul.skills-list {
+  list-style: none;
+  padding: 3rem 0;
+  display: grid;
+  row-gap: 1.6rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.section-narrow {
+max-width: 60%;
+display:flex;
+flex-direction: column;
+margin: 0 auto;
+
+}
+
+.section-wide {
+  display:flex;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  height: 15vh;
+}
+
+.home {
+  height: 85vh;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}  
+
+.title {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.home-background {
+  z-index: -1;
+  font-size: 500px;
+  font-weight: 900;
+  letter-spacing: -72px;
+  color: #EDEDED;
+  position: fixed;
+  left: -12%;
+  top: 20%;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-self: center;
+}
+
+.contact-container {
+  background-color: #F7F7F7;
+}
+
+.contact-details {
+  display: flex;
 }
