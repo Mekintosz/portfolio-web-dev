@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,33 @@
 </head>
 <body>
     <header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">PROJECTS</li>
+                <li class="nav__item">ABOUT</li>
+                <li class="nav__item">CONTACT</li>
+            </ul>
+        </nav>
         <div class="logo-section">
-            <span class="name">Michał Łazicki</span>
-            <span class="subtitle">^Portfolio^</span>
+            <!-- <span class="name">Michał Łazicki</span>
+            <span class="subtitle">^Portfolio^</span> -->
         </div>
-        <form action="">bright/dark</form>
+        <!-- <form action="">bright/dark</form> -->
     </header>
+    <section class="home">
+        <p class="home__name">Michał</p>
+        <p class="home__name home__name--surname" >Łazicki</p>
+        <div>
+            <p class="home__subtitle">Frontend developer who create <i>beautiful and engaging</i> websites with <i>latest technologies</i></p>
+          
+        </div>
+        <div class="circle"></div>
+       
+    </section>
     <main>
         <section class="home section-narrow">
             <h1 class="title">Front end developer<br/>making <i>digital experiences</i><br/>come to life</h1>
-            <p class="home-background">LoveWebDev</p>
+            <!-- <p class="home-background">LoveWebDev</p> -->
         </section>
         <section class="about section section-narrow">
             <h2 class="about-heading">Introduction</h2>
@@ -58,12 +75,12 @@
             <h2 class="skills-heading">Skills</h2>
             <p class="skills-about">Through on line courses and self study I have gained solid understanding of full life cycle of web applications. My skills enable me to deliver enjoyable experiences to users.</p>
             <ul class="skills-list">
-                <li class="sklis-item">Javascript</li>
-                <li class="sklis-item">HTML</li>
-                <li class="sklis-item">CSS</li>
-                <li class="sklis-item">React</li>
-                <li class="sklis-item">Jest</li>
-                <li class="sklis-item">Nodejs</li>
+                <li class="skills-item">Javascript</li>
+                <li class="skills-item">HTML</li>
+                <li class="skills-item">CSS</li>
+                <li class="skills-item">React</li>
+                <li class="skills-item">Jest</li>
+                <li class="skills-item">Nodejs</li>
             </ul>
         </section>
         <section class="contact section-wide">
@@ -77,16 +94,15 @@
                     </ul>
                     <form action="" method="get">
                         <div class="input-super-group">
-                            <div class="input-group">
-                                <label for="name">Name</label>
+                            <div class="input-group small-input">
+                                <label class="namme-input" for="name">Name</label>
                                 <input type="text" name="name">
                             </div>
-                            <div class="input-group">
-                                <label for="email">Email</label>
+                            <div class="input-group small-input">
+                                <label class="email-input" for="email">Email</label>
                                 <input type="email" name="email">
                             </div>
                         </div>
-                       
                         <div class="input-group">
                             <label for="message">Message</label>
                             <textarea></textarea>
@@ -98,7 +114,7 @@
         </section>
     </main>
     <footer>
-        <span class="footnote">Designed and developed by Michał Łazicki</span>
+        <span class="footnote">Designed and developed by </span><span class="foot-name">Michał Łazicki</span>
     </footer>
 </body>
 </html>
