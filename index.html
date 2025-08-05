@@ -1,120 +1,234 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio front-end web-dev</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="./main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">PROJECTS</li>
-                <li class="nav__item">ABOUT</li>
-                <li class="nav__item">CONTACT</li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#projects">PROJECTS</a>
+          </li>
+          <li class="nav__item"><a href="#about">ABOUT</a></li>
+          <li class="nav__item"><a href="#skills">SKILLS</a></li>
+          <li class="nav__item"><a href="#contact">CONTACT</a></li>
+          <li class="nav__item">
+            <a
+              class="nav__item-btn"
+              href="./assets/CV Michał Łazicki.pdf"
+              download
+              >Download CV</a
+            >
+          </li>
+        </ul>
         <div class="logo-section">
-            <!-- <span class="name">Michał Łazicki</span>
+          <!-- <span class="name">Michał Łazicki</span>
             <span class="subtitle">^Portfolio^</span> -->
         </div>
-        <!-- <form action="">bright/dark</form> -->
+      </nav>
+      <!-- <form action="">bright/dark</form> -->
     </header>
-    <section class="home">
-        <p class="home__name">Michał</p>
-        <p class="home__name home__name--surname" >Łazicki</p>
-        <div>
-            <p class="home__subtitle">Frontend developer who create <i>beautiful and engaging</i> websites with <i>latest technologies</i></p>
-          
-        </div>
-        <div class="circle"></div>
-       
+    <section class="home" id="home">
+      <p class="home__name">Michał</p>
+      <p class="home__name home__name--surname">Łazicki</p>
+      <div>
+        <p class="home__subtitle">
+          Create <i>beautiful and engaging</i> websites with
+          <i>latest technologies</i>
+        </p>
+      </div>
+      <div class="circle"></div>
+      <nav class="side-nav">
+        <a
+          class="side-nav__btn"
+          href="https://github.com/Mekintosz?tab=repositories"
+          target="_blank"
+          ><img src="./assets/GitHub_Invertocat_Dark.png" alt="GitHub"
+        /></a>
+        <a
+          class="side-nav__btn"
+          href="https://linkedin.com/in/michał-łazicki-0872b92a"
+          target="_blank"
+          ><img src="./assets/linkedin-logo.png" alt="LinkedIn"
+        /></a>
+        <a class="side-nav__btn" href="./assets/CV Michał Łazicki.pdf" download
+          ><img src="./assets/file.png" alt="CV"
+        /></a>
+      </nav>
     </section>
     <main>
-        <section class="home section-narrow">
-            <h1 class="title">Front end developer<br/>making <i>digital experiences</i><br/>come to life</h1>
-            <!-- <p class="home-background">LoveWebDev</p> -->
-        </section>
-        <section class="about section section-narrow">
-            <h2 class="about-heading">Introduction</h2>
-            <p class="introduction-body">
-                Welcome to my portfolio website.  Front end development is my passions. I enjoy making digital experiences come to life, seamlessly weaving together design and functionality. Willingness to learn and persistence were essential me on the way to  present you with my portfolio.
-            </p>
-            <p class="introduction-body">A hero front-end developer is the creative architect behind the captivating user interfaces that make digital experiences come to life, seamlessly weaving together design and functionality. Their mastery of HTML, CSS, and JavaScript transforms static concepts into dynamic, user-friendly websites and applications.
-            </p>    
-        </section>
-        <section class="section-wide" >
-            <div class="projects">
-                <div class="project">
-                    <img src="./placeholder.jpg" alt="">
-                    <div class="project-info">
-                        <h2 class="project-title">Project 1</h2>
-                        <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis est consectetur, sint praesentium ab dolorum commodi sapiente ea laboriosam voluptatem velit voluptates? Minima nihil repellendus porro. Architecto non doloremque doloribus.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-info">
-                        <h2 class="project-title">Project 2</h2>
-                        <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus sequi eius explicabo veniam cupiditate nostrum commodi dicta recusandae molestiae maiores corporis, dolorem, qui iure magnam aut ut id ea.</p>
-                    </div>
-                    <img src="./placeholder.jpg" alt="">
-                </div>
-                <div class="project">
-                    <img src="./placeholder.jpg" alt="">
-                    <div class="project-info">
-                        <h2 class="project-title">Project 3</h2>
-                        <p class="project-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse autem est quidem accusamus incidunt vel reiciendis. Eveniet quam eos officia velit nihil provident, nobis unde consequuntur cum maxime esse tenetur!</p>
-                    </div>
-                </div>
+      <!-- <section class="home section-narrow">
+        <h1 class="title">
+          Front end developer<br />making <i>digital experiences</i><br />come
+          to life
+        </h1>
+        <p class="home-background">LoveWebDev</p>
+      </section> -->
+      <section class="about section-narrow" id="about">
+        <h2 class="about-heading">Introduction</h2>
+        <p class="introduction-body">
+          Welcome to my portfolio website. Front end development is my passions.
+          I enjoy making digital experiences come to life, seamlessly weaving
+          together design and functionality. Willingness to learn and
+          persistence were essential me on the way to present you with my
+          portfolio.
+        </p>
+        <p class="introduction-body">
+          A hero front-end developer is the creative architect behind the
+          captivating user interfaces that make digital experiences come to
+          life, seamlessly weaving together design and functionality. Their
+          mastery of HTML, CSS, and JavaScript transforms static concepts into
+          dynamic, user-friendly websites and applications.
+        </p>
+      </section>
+      <section class="section-wide" id="projects">
+        <div class="projects">
+          <div class="project">
+            <img src="./assets/alex-kowalski-studio.png" alt="" />
+            <div class="project-info">
+              <h2 class="project-title">
+                Alex Kowalski Studio - portofolio page
+              </h2>
+              <p class="project-about">
+                Single-page portfolio site for an earthenware and clay works
+                studio. The site is fully responsive and built with HTML and
+                CSS. The design template was provided by The Odin Project and
+                then redesigned to fit the fake client's expectations and needs.
+              </p>
             </div>
-            
-        </section>
-        <section class="skills section-narrow">
-            <h2 class="skills-heading">Skills</h2>
-            <p class="skills-about">Through on line courses and self study I have gained solid understanding of full life cycle of web applications. My skills enable me to deliver enjoyable experiences to users.</p>
-            <ul class="skills-list">
-                <li class="skills-item">Javascript</li>
-                <li class="skills-item">HTML</li>
-                <li class="skills-item">CSS</li>
-                <li class="skills-item">React</li>
-                <li class="skills-item">Jest</li>
-                <li class="skills-item">Nodejs</li>
+          </div>
+          <div class="project">
+            <div class="project-info">
+              <h2 class="project-title">
+                Ocean - Landing page and signup form
+              </h2>
+              <p class="project-about">
+                Responsive to all devices landing page with contact form. All
+                things about Ocean portal webpage.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">HTML</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">Javascript</li>
+              </ul>
+            </div>
+            <img
+              src="./assets/ocean-landing-page.png"
+              alt="Ocean landing page"
+            />
+          </div>
+          <div class="project">
+            <img src="./assets/memory-game.png" alt="" />
+            <div class="project-info">
+              <h2 class="project-title">NASA Memory Game</h2>
+              <p class="project-about">
+                Click on every image only once to display new round of photos.
+                The app is build with React, Vite and uses GitHub Actions for
+                deployment to gh-pages. API from nasa domain is being fetched to
+                load image URLs.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">React</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">API</li>
+                <li class="techstack-item">Vite</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills section-narrow" id="skills">
+        <h2 class="skills-heading">Skills</h2>
+        <p class="skills-about">
+          Through on line courses and self study I have gained solid
+          understanding of full life cycle of web applications. My skills enable
+          me to deliver enjoyable experiences to users.
+        </p>
+        <ul class="skills-list">
+          <li class="skills-item">Javascript</li>
+          <li class="skills-item">HTML</li>
+          <li class="skills-item">CSS</li>
+          <li class="skills-item">React</li>
+          <li class="skills-item">Jest</li>
+          <li class="skills-item">Git</li>
+          <li class="skills-item">GitHub</li>
+          <li class="skills-item">Figma</li>
+          <li class="skills-item">Webpack</li>
+        </ul>
+      </section>
+      <section class="contact section-wide" id="contact">
+        <div class="contact-container">
+          <div class="contact-details">
+            <ul class="contact-info">
+              <h2 class="contact-details-title">Contact</h2>
+              <li class="contact-item">
+                <img
+                  class="icon-contact"
+                  src="./assets/envelope-open.png"
+                  alt="open envelope"
+                />
+                <a href="" class="email">michal.lazicki@gmail.com</a>
+              </li>
+              <li class="contact-item">
+                <img
+                  class="icon-contact"
+                  src="./assets/phone.png"
+                  alt="open envelope"
+                />579 526 080
+              </li>
+              <li class="contact-item">
+                <a
+                  class="side-nav__btn"
+                  href="https://github.com/Mekintosz?tab=repositories"
+                  target="_blank"
+                  ><img
+                    src="./assets/GitHub_Invertocat_Dark.png"
+                    alt="GitHub" /></a
+                >GitHub
+              </li>
+              <li class="contact-item">
+                <a
+                  class="side-nav__btn"
+                  href="https://linkedin.com/in/michał-łazicki-0872b92a"
+                  target="_blank"
+                  ><img src="./assets/linkedin-logo.png" alt="LinkedIn" /></a
+                >LinkedIn
+              </li>
             </ul>
-        </section>
-        <section class="contact section-wide">
-            <div class="contact-container">
-                <div class="contact-details">
-                    <ul class="contact-info">
-                        <h2 class="contact-details-title">Contact</h2>
-                        <li class="contact-item"><a href="" class="email"></a>michal.lazicki@gmail.com</li>
-                        <li class="contact-item">GitHub</li>
-                        <li class="contact-item">Hiroku</li>
-                    </ul>
-                    <form action="" method="get">
-                        <div class="input-super-group">
-                            <div class="input-group small-input">
-                                <label class="namme-input" for="name">Name</label>
-                                <input type="text" name="name">
-                            </div>
-                            <div class="input-group small-input">
-                                <label class="email-input" for="email">Email</label>
-                                <input type="email" name="email">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <label for="message">Message</label>
-                            <textarea></textarea>
-                        </div>
-                    </form>
+            <form action="" method="get">
+              <div class="input-super-group">
+                <div class="input-group small-input">
+                  <label class="namme-input" for="name">Name</label>
+                  <input type="text" name="name" />
                 </div>
-                
-            </div>
-        </section>
+                <div class="input-group small-input">
+                  <label class="email-input" for="email">Email</label>
+                  <input type="email" name="email" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <span class="footnote">Designed and developed by </span><span class="foot-name">Michał Łazicki</span>
+      <span class="footnote">Designed and developed by </span
+      ><span class="foot-name">Michał Łazicki</span>
     </footer>
-</body>
+  </body>
 </html>
