@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio front-end web-dev</title>
-    <!-- boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -32,12 +31,8 @@
             >
           </li>
         </ul>
-        <div class="logo-section">
-          <!-- <span class="name">Michał Łazicki</span>
-            <span class="subtitle">^Portfolio^</span> -->
-        </div>
+        <div class="logo-section"></div>
       </nav>
-      <!-- <form action="">bright/dark</form> -->
     </header>
     <section class="home" id="home">
       <p class="home__name">Michał</p>
@@ -68,13 +63,6 @@
       </nav>
     </section>
     <main>
-      <!-- <section class="home section-narrow">
-        <h1 class="title">
-          Front end developer<br />making <i>digital experiences</i><br />come
-          to life
-        </h1>
-        <p class="home-background">LoveWebDev</p>
-      </section> -->
       <section class="about section-narrow" id="about">
         <h2 class="about-heading">Introduction</h2>
         <p class="introduction-body">
@@ -110,10 +98,6 @@
               >
               <a href="https://github.com/Mekintosz/pogoda" target="_blank"
                 >App's GitHub page
-                <!-- <img
-                  src="./assets/GitHub_Invertocat_Dark.png"
-                  alt="GitHub logo"
-                /> -->
               </a>
             </div>
           </div>
@@ -137,7 +121,7 @@
                 >Visit app's page</a
               >
               <a
-                href="hhttps://github.com/Mekintosz/Alex-Kowalski-Studio"
+                href="https://github.com/Mekintosz/Alex-Kowalski-Studio"
                 target="_blank"
                 >App's GitHub page
               </a>
@@ -161,7 +145,7 @@
                 <li class="techstack-item">Vite</li>
               </ul>
               <a href="https://mekintosz.github.io/memory-card/" target="_blank"
-                >Visit app's page</a
+                >Visit app's page (only large screen)</a
               >
               <a href="https://github.com/Mekintosz/memory-card" target="_blank"
                 >App's GitHub page
@@ -270,16 +254,30 @@
               <div class="input-super-group">
                 <div class="input-group small-input">
                   <label class="namme-input" for="name">Name</label>
-                  <input type="text" name="name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
                 <div class="input-group small-input">
                   <label class="email-input" for="email">Email</label>
-                  <input type="email" name="email" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email address"
+                    required
+                  />
                 </div>
               </div>
               <div class="input-group">
                 <label for="message">Message</label>
-                <textarea name="message" required></textarea>
+                <textarea
+                  name="message"
+                  placeholder="Your message, when finished pleas press send"
+                  required
+                ></textarea>
                 <button class="form-btn" type="submit">Send</button>
               </div>
             </form>
