@@ -19,6 +19,7 @@
   --plum: #9393bb59;
   --grey: #f7f7f7af;
   --plum-strong: #9393bbf1;
+  --plum-solid: #9393bb;
   --shadow-item: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -126,6 +127,7 @@ header {
   width: 100%;
   position: sticky;
   top: 0;
+  z-index: 2000;
 }
 
 .nav__list {
@@ -139,7 +141,7 @@ header {
   border-radius: 26px;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  z-index: 200;
+  z-index: 2000;
 }
 
 .nav__item a {
@@ -150,15 +152,16 @@ header {
 
 .nav__item a:hover,
 .nav__item a.active {
-  color: var(--plum-strong);
+  color: var(--plum-solid);
 }
 
 .nav__item-btn {
   border: 1px solid rgba(0, 0, 0, 0.212);
   border-radius: 12px;
-  transition: background-color 500ms ease-in-out;
+  /* transition: background-color 800ms ease-in-out; */
   background-color: transparent;
-  padding: 0.2rem 0.4em;
+  padding: 0rem 0.4em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
 }
 
 .nav__item-btn:hover {
@@ -234,7 +237,7 @@ header {
 
 ul.techstack-list {
   list-style: none;
-  margin-top: 1rem;
+  margin: 1rem;
   display: grid;
   gap: 0.6rem;
   grid-template-columns: 1fr 1fr 1fr;
@@ -247,6 +250,12 @@ ul.techstack-list {
   background-color: var(--plum);
   border-radius: 1.3rem;
   box-shadow: var(--shadow-item);
+}
+
+.project a {
+  font-size: 1rem;
+  margin: 0.3rem auto;
+  text-decoration: underline;
 }
 
 .contact-container {
@@ -314,6 +323,21 @@ form {
 
 .icon-contact {
   width: 1.8rem;
+}
+
+.form-btn {
+  width: 45%;
+  margin: 1.3rem auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 12px;
+  /* transition: background-color 800ms ease-in-out; */
+  background-color: transparent;
+  padding: 0rem 0.4em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
+}
+
+.form-btn:hover {
+  background-color: var(--plum);
 }
 
 footer {
@@ -530,6 +554,7 @@ footer {
     padding: 1rem 0;
     text-align: center;
     display: none;
+    background-color: var(--plum-strong);
   }
 
   .nav__list.active {
@@ -567,6 +592,10 @@ footer {
   .project {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .project.reverse {
+    flex-direction: column-reverse;
   }
 
   img {
