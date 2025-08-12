@@ -20,7 +20,6 @@
   --grey: #f7f7f7af;
   --plum-strong: #9393bbf1;
   --plum-solid: #9393bb;
-  --shadow-item: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 body {
@@ -231,7 +230,7 @@ header {
 .project-info {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 40%;
   align-self: center;
 }
 
