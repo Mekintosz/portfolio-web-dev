@@ -220,11 +220,13 @@ header {
 
 .projects img {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: fit-content;
 }
 
 .project {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .project-info {
@@ -253,6 +255,7 @@ ul.techstack-list {
 
 .project a {
   font-size: 1rem;
+  font-weight: 600;
   margin: 0.3rem auto;
   text-decoration: underline;
 }
