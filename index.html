@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="./main.js" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -26,7 +26,7 @@
           <li class="nav__item">
             <a
               class="nav__item-btn"
-              href="./assets/CV Michał Łazicki.pdf"
+              href="./src/public/CV Michał Łazicki.pdf"
               download
               >Download CV</a
             >
@@ -50,16 +50,19 @@
           class="side-nav__btn"
           href="https://github.com/Mekintosz?tab=repositories"
           target="_blank"
-          ><img src="./assets/GitHub_Invertocat_Dark.png" alt="GitHub"
+          ><img src="./src/assets/GitHub_Invertocat_Dark.png" alt="GitHub"
         /></a>
         <a
           class="side-nav__btn"
           href="https://linkedin.com/in/michał-łazicki-0872b92a"
           target="_blank"
-          ><img src="./assets/linkedin-logo.png" alt="LinkedIn"
+          ><img src="./src/assets/linkedin-logo.png" alt="LinkedIn"
         /></a>
-        <a class="side-nav__btn" href="./assets/CV Michał Łazicki.pdf" download
-          ><img src="./assets/file.png" alt="CV"
+        <a
+          class="side-nav__btn"
+          href="./src/assets/CV Michał Łazicki.pdf"
+          download
+          ><img src="./src/assets/file.png" alt="CV"
         /></a>
       </nav>
     </section>
@@ -80,7 +83,7 @@
         <div class="projects">
           <div class="project">
             <img
-              src="./assets/black-olives.png"
+              src="./src/assets/black-olives.png"
               alt="screen shot of Black Olives webpage"
             />
             <div class="project-info">
@@ -135,10 +138,13 @@
                 >App's GitHub page
               </a>
             </div>
-            <img src="./assets/pogoda-app.png" alt="screen shot of the app" />
+            <img
+              src="./src/assets/pogoda-app.png"
+              alt="screen shot of the app"
+            />
           </div>
           <div class="project reverse">
-            <img src="./assets/alex-kowalski-studio.png" alt="" />
+            <img src="./src/assets/alex-kowalski-studio.png" alt="" />
             <div class="project-info">
               <h2 class="project-title">Alex Kowalski Studio</h2>
               <p class="project-about">
@@ -186,11 +192,11 @@
                 >App's GitHub page
               </a>
             </div>
-            <img src="./assets/memory-game.png" alt="" />
+            <img src="./src/assets/memory-game.png" alt="" />
           </div>
           <div class="project reverse">
             <img
-              src="./assets/ocean-landing-page.png"
+              src="./src/assets/ocean-landing-page.png"
               alt="Ocean landing page"
             />
             <div class="project-info">
@@ -247,7 +253,7 @@
               <li class="contact-item">
                 <img
                   class="icon-contact"
-                  src="./assets/envelope-open.png"
+                  src="./src/assets/envelope-open.png"
                   alt="open envelope"
                 />
                 <a href="mailto:michal.lazicki@gmail.com.com" class="email"
@@ -257,7 +263,7 @@
               <li class="contact-item">
                 <img
                   class="icon-contact"
-                  src="./assets/phone.png"
+                  src="./src/assets/phone.png"
                   alt="open envelope"
                 />+48 579 526 080
               </li>
@@ -266,7 +272,9 @@
                   class="side-nav__btn"
                   href="https://github.com/Mekintosz?tab=repositories"
                   target="_blank"
-                  ><img src="./assets/GitHub_Invertocat_Dark.png" alt="GitHub"
+                  ><img
+                    src="./src/assets/GitHub_Invertocat_Dark.png"
+                    alt="GitHub"
                 /></a>
                 <a
                   href="https://github.com/Mekintosz?tab=repositories"
@@ -279,7 +287,7 @@
                   class="side-nav__btn"
                   href="https://linkedin.com/in/michał-łazicki-0872b92a"
                   target="_blank"
-                  ><img src="./assets/linkedin-logo.png" alt="LinkedIn"
+                  ><img src="./src/assets/linkedin-logo.png" alt="LinkedIn"
                 /></a>
                 <a
                   href="https://linkedin.com/in/michał-łazicki-0872b92a"
