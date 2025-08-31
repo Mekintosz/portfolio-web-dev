@@ -1,12 +1,12 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js", // your main JS entry
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   mode: "development", // "production" for minified build
   devServer: {
@@ -17,25 +17,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [
-          MiniCssExtractPlugin.loader, // extracts CSS into file
-          "css-loader", // resolves @import, url()
-          {
-            loader: "postcss-loader", // autoprefixer
-            options: {
-              postcssOptions: {
-                plugins: ["autoprefixer"],
-              },
-            },
-          },
-          "sass-loader", // compiles SCSS → CSS
-        ],
+        test: /\.(scss|css)$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "style.css" }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
   ],
 };
