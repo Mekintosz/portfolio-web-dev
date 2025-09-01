@@ -1,5 +1,51 @@
 @use "_typography";
 
+html {
+  font-family: $font-family;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: $font-family-body;
+  background-color: $color-bg-light;
+  color: $color-text-light;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &[data-theme="dark"] {
+    background-color: $color-bg-dark;
+    color: $color-text-dark;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1-s;
+}
+
+a {
+  @include theme-prop(color, $color-primary-light, $color-primary-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    @include theme-prop(
+      color,
+      darken($color-primary-light, 10%),
+      lighten($color-primary-dark, 10%)
+    );
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  @include theme-prop(
+    background-color,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  @include theme-prop(color, #fff, #fff);
 }
