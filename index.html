@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="assets/port-favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio front-end web-dev</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./src/scss/main.scss" />
     <script type="module" src="./src/index.js" defer></script>
   </head>
   <body>
     <header>
-      <nav class="nav">
+      <nav class="nav panel-content">
         <i class="bx bx-menu" id="menu-icon"></i>
         <ul class="nav__list">
           <li class="nav__item">
@@ -36,16 +42,18 @@
       </nav>
     </header>
     <section class="home" id="home">
-      <p class="home__name">Michał</p>
-      <p class="home__name home__name--surname">Łazicki</p>
-      <div>
-        <p class="home__subtitle">
-          Create <i>beautiful and engaging</i> websites with
-          <i>latest technologies</i>
-        </p>
+      <div class="panel-content home-left">
+        <p class="home__name">Michał</p>
+        <p class="home__name home__name--surname">Łazicki</p>
+        <div>
+          <p class="home__subtitle">
+            Create <i>beautiful and engaging</i> websites with
+            <i>latest technologies</i>
+          </p>
+        </div>
       </div>
-      <div class="circle"></div>
-      <nav class="side-nav">
+      <div class="panel-content home-right"></div>
+      <nav class="panel-content side-nav">
         <a
           class="side-nav__btn"
           href="https://github.com/Mekintosz?tab=repositories"
@@ -67,8 +75,8 @@
       </nav>
     </section>
     <main>
-      <section class="about section-narrow" id="about">
-        <h2 class="about-heading">Introduction</h2>
+      <section class="panel-content about section-narrow" id="about">
+        <h1 class="about-heading">Introduction</h1>
         <p class="introduction-body">
           I'm a front-end developer who enjoys building simple, user-friendly
           websites and learning how the web works behind the scenes. I started
@@ -81,15 +89,15 @@
       </section>
       <section class="section-wide" id="projects">
         <div class="projects">
-          <div class="project">
+          <div class="panel-content project">
             <img
               src="./src/assets/black-olives.png"
               alt="screen shot of Black Olives webpage"
             />
             <div class="project-info">
-              <h2 class="project-title">
+              <h1 class="project-title">
                 Black Olives — Responsive Restaurant Website
-              </h2>
+              </h1>
               <p class="project-about">
                 A mobile-first, single-page restaurant site built with semantic
                 HTML, CSS Grid/Flexbox, and smooth anchor navigation. Features
@@ -116,9 +124,9 @@
               </a>
             </div>
           </div>
-          <div class="project">
+          <div class="panel-content project">
             <div class="project-info">
-              <h2 class="project-title">Pogoda App</h2>
+              <h1 class="project-title">Pogoda App</h1>
               <p class="project-about">
                 A weather app powered by an API provides a weather forecast in
                 any given location around the world. Has an option to toggle
@@ -143,10 +151,10 @@
               alt="screen shot of the app"
             />
           </div>
-          <div class="project reverse">
+          <div class="panel-content project reverse">
             <img src="./src/assets/alex-kowalski-studio.png" alt="" />
             <div class="project-info">
-              <h2 class="project-title">Alex Kowalski Studio</h2>
+              <h1 class="project-title">Alex Kowalski Studio</h1>
               <p class="project-about">
                 Single-page portfolio site for an earthenware and clay works
                 studio. The site is fully responsive and built with HTML and
@@ -170,9 +178,9 @@
               </a>
             </div>
           </div>
-          <div class="project">
+          <div class="panel-content project">
             <div class="project-info">
-              <h2 class="project-title">NASA Memory Game</h2>
+              <h1 class="project-title">NASA Memory Game</h1>
               <p class="project-about">
                 Click on every image only once to display new round of photos.
                 The app is build with React, Vite and uses GitHub Actions for
@@ -194,13 +202,13 @@
             </div>
             <img src="./src/assets/memory-game.png" alt="" />
           </div>
-          <div class="project reverse">
+          <div class="panel-content project reverse">
             <img
               src="./src/assets/ocean-landing-page.png"
               alt="Ocean landing page"
             />
             <div class="project-info">
-              <h2 class="project-title">Ocean</h2>
+              <h1 class="project-title">Ocean</h1>
               <p class="project-about">
                 Responsive to all devices landing page with contact form. All
                 things about Ocean portal webpage.
@@ -224,8 +232,8 @@
           </div>
         </div>
       </section>
-      <section class="skills section-narrow" id="skills">
-        <h2 class="skills-heading">Skills</h2>
+      <section class="panel-content skills section-narrow" id="skills">
+        <h1 class="skills-heading">Skills</h1>
         <p class="skills-about">
           Through on line courses and self study I have gained solid
           understanding of full life cycle of web applications. My skills enable
@@ -246,10 +254,10 @@
         </ul>
       </section>
       <section class="contact section-wide" id="contact">
-        <div class="contact-container">
+        <div class="panel-content contact-container">
           <div class="contact-details">
             <ul class="contact-info">
-              <h2 class="contact-details-title">Contact</h2>
+              <h1 class="contact-details-title">Contact</h1>
               <li class="contact-item">
                 <img
                   class="icon-contact"

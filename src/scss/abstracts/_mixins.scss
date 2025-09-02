@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+
+@mixin theme($theme: rgb(36, 41, 47)) {
+  background: $theme;
+  color: #fff;
+}
+
+@mixin type-media(
+  $font-small,
+  $font-medium,
+  $font-large,
+  $vw-small: 320px,
+  $vw-medium: 768px,
+  $vw-large: 1200px
+) {
+  font-size: $font-small;
+
+  @media (min-width: $vw-small) {
+    font-size: $font-small;
+  }
+
+  @media (min-width: $vw-medium) {
+    font-size: $font-medium;
+  }
+
+  @media (min-width: $vw-large) {
+    font-size: $font-large;
+  }
+}
+
+@mixin theme-prop(
+  $property: background-color,
+  $light-value: $color-light-scheme-body,
+  $dark-value: $color-dark-scheme-body
+) {
+  #{$property}: $dark-value;
+
+  [data-theme="light"] & {
+    #{$property}: $light-value;
+  }
+}
+
+// For flexbox centering
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

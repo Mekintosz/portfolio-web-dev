@@ -1,0 +1,16 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+section {
+  @include theme-prop();
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+}
+
+.panel-content {
+  @include theme-prop(
+    background-color,
+    $color-light-scheme-bg,
+    $color-dark-scheme-bg
+  );
+}

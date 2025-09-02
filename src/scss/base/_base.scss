@@ -1,37 +1,43 @@
-@use "_typography";
+@use "typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 html {
-  font-family: $font-family;
+  font-family: $font-family-body;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: $color-bg-light;
-  color: $color-text-light;
+  font-family: $font-family-body;
+  background-color: $color-light-scheme-body;
+  color: $color-light-scheme-fonts;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &[data-theme="dark"] {
-    background-color: $color-bg-dark;
-    color: $color-text-dark;
+    background-color: $color-dark-scheme-body;
+    color: $color-dark-scheme-fonts;
   }
 }
 
 h1 {
-  font-size: $font-size-h1-s;
+  @include type-media($font-size-h1-s, $font-size-h1-m, $font-size-h1-l);
+}
+
+h2 {
+  @include type-media($font-size-h2-s, $font-size-h2-m, $font-size-h2-l);
 }
 
 a {
-  @include theme-prop(color, $color-primary-light, $color-primary-dark);
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: text-shadow 1s ease;
 
   &:hover {
-    @include theme-prop(
-      color,
-      darken($color-primary-light, 10%),
-      lighten($color-primary-dark, 10%)
-    );
+    text-shadow: $color-accent-prime 0 0 12px;
+  }
+  &.active {
+    color: lighten($color-accent-prime, 20%);
   }
 }
 
@@ -42,10 +48,6 @@ button {
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 
-  @include theme-prop(
-    background-color,
-    $color-primary-light,
-    $color-primary-dark
-  );
+  @include theme-prop(background-color, $font-light-scheme, $font-dark-scheme);
   @include theme-prop(color, #fff, #fff);
 }

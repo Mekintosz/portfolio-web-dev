@@ -1,0 +1,37 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+nav {
+  @include theme-prop();
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+}
+.nav__list {
+  @include type-media(16px, 18px, 20px);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6rem;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 2000;
+}
+
+.nav__item-btn {
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 12px;
+  /* transition: background-color 800ms ease-in-out; */
+  background-color: transparent;
+  padding: 0rem 0.4em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
+}
+
+.nav__item-btn:hover {
+  background-color: var(--plum);
+}
+
+#menu-icon {
+  font-size: 3rem;
+  display: none;
+}
