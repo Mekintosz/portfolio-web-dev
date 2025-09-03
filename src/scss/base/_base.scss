@@ -10,17 +10,13 @@ html {
 
 body {
   font-family: $font-family-body;
-  background-color: $color-light-scheme-body;
-  color: $color-light-scheme-fonts;
   transition: background-color 0.3s ease, color 0.3s ease;
 
-  &[data-theme="dark"] {
-    background-color: $color-dark-scheme-body;
-    color: $color-dark-scheme-fonts;
-  }
+  @include theme-prop();
 }
 
 h1 {
+  margin-bottom: 1rem;
   @include type-media($font-size-h1-s, $font-size-h1-m, $font-size-h1-l);
 }
 

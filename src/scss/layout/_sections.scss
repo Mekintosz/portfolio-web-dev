@@ -3,6 +3,7 @@
 @use "../abstracts/mixins" as *;
 
 section {
+  margin-bottom: 1.6em;
   @include theme-prop();
   @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
 }
@@ -16,6 +17,12 @@ section {
 }
 
 .section-narrow {
-  width: 60%;
   @include flex-items-position(column);
+  border-top: 1px solid $color-accent-prime;
+  border-bottom: 1px solid $color-accent-prime;
+}
+
+.section-narrow-content {
+  margin: 1.8em 1em 2.6em;
+  text-align: center;
 }
