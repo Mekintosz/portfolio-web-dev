@@ -37,7 +37,7 @@ a {
     text-shadow: $color-accent-prime 0 0 12px;
   }
   &.active {
-    color: lighten($color-accent-prime, 20%);
+    color: $color-accent-prime;
   }
 }
 
@@ -48,6 +48,11 @@ button {
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 
-  @include theme-prop(background-color, $font-light-scheme, $font-dark-scheme);
-  @include theme-prop(color, #fff, #fff);
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+}
+
+a {
+  img {
+    width: 50px;
+  }
 }

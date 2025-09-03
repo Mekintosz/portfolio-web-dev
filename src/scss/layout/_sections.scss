@@ -14,3 +14,8 @@ section {
     $color-dark-scheme-bg
   );
 }
+
+.section-narrow {
+  width: 60%;
+  @include flex-items-position(column);
+}

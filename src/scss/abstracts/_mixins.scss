@@ -41,7 +41,7 @@
 }
 
 // For flexbox centering
-@mixin flex-center($direction: row, $justify: center, $align: center) {
+@mixin flex-items-position($direction: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;

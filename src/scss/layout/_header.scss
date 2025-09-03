@@ -3,5 +3,9 @@
 @use "../abstracts/mixins" as *;
 
 header {
-  @include theme-prop();
+  @include theme-prop(
+    background-color,
+    $color-light-scheme-bg,
+    $color-dark-scheme-bg
+  );
 }
