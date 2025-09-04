@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as *;
+
+footer {
+  @include flex-items-position();
+  padding-bottom: 1.6em;
+}

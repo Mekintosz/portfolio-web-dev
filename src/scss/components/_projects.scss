@@ -3,8 +3,5 @@
 @use "../abstracts/mixins" as *;
 
 .project {
-  border: 1px solid $color-accent-prime;
-  border-radius: 6px;
-  padding: 1em;
-  margin: 1em;
+  @include panel;
 }

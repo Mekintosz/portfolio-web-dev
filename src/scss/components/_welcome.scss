@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.home-name {
+  font-family: $font-family-heading;
+  @include type-media(40px, 48px, 64px);
+}
+
+.home-left {
+  @include flex-items-position(column);
+}
+
+.subtitle {
+  font-family: $font-family-heading;
+
+  letter-spacing: 0.4em;
+  @include type-media(15px, 17px, 19px);
+}
+
+.paragraph {
+  width: 280px;
+  margin-top: 60px;
+  @include type-media(24px, 28px, 32px);
+}
+
+.welcome {
+  height: 70vh;
+  text-align: center;
+  @include flex-items-position(column, center, center);
+}

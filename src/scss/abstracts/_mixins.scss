@@ -4,22 +4,19 @@
   $font-small,
   $font-medium,
   $font-large,
+  $prop: font-size,
   $vw-small: 320px,
   $vw-medium: 768px,
   $vw-large: 1200px
 ) {
-  font-size: $font-small;
-
-  @media (min-width: $vw-small) {
-    font-size: $font-small;
-  }
+  #{$prop}: $font-small;
 
   @media (min-width: $vw-medium) {
-    font-size: $font-medium;
+    #{$prop}: $font-medium;
   }
 
   @media (min-width: $vw-large) {
-    font-size: $font-large;
+    #{$prop}: $font-large;
   }
 }
 
@@ -41,4 +38,11 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin panel {
+  border: 1px solid $color-accent-prime;
+  border-radius: 6px;
+  margin: 0.8em;
+  padding: 1em;
 }
