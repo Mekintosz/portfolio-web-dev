@@ -12,17 +12,25 @@ body {
   font-family: $font-family-body;
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  @include theme-prop();
+  @include type-media($font-size-body-s, $font-size-body-m, $font-size-body-l);
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  @include theme-prop;
 }
 
 h1 {
-  margin-bottom: 1rem;
+  font-weight: 500;
   @include type-media($font-size-h1-s, $font-size-h1-m, $font-size-h1-l);
 }
 
 h2 {
+  font-weight: 400;
+  margin: 0.8em 0;
   @include type-media($font-size-h2-s, $font-size-h2-m, $font-size-h2-l);
+}
+
+h1,
+h2 {
+  font-family: $font-family-heading;
 }
 
 a {
@@ -40,12 +48,12 @@ a {
 
 button {
   cursor: pointer;
-  border: none;
+  border: 1px solid $color-download-button;
+  background: none;
+  color: $color-download-button;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
 }
 
 a {

@@ -20,9 +20,17 @@ section {
   @include flex-items-position(column);
   border-top: 1px solid $color-accent-prime;
   border-bottom: 1px solid $color-accent-prime;
+
+  & h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 .section-narrow-content {
   margin: 1.8em 1em 2.6em;
   text-align: center;
+}
+
+.section-wide {
+  @include flex-items-position(column);
 }

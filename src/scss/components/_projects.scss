@@ -4,4 +4,36 @@
 
 .project {
   @include panel;
+  & img {
+    margin: 0.83em 0;
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em 2em;
+    margin: 1.6em;
+    font-size: 1.1em;
+    & li {
+      flex: 1;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+}
+
+.projects-heading {
+  @include panel;
+  padding: 0.1em 1.6em;
+}
+
+.project-links {
+  margin: 0.83em;
+  gap: 0.4em;
+  @include flex-items-position(column);
+  & svg {
+    @include type-media(18px, 20px, 22px, width);
+    @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  }
 }
