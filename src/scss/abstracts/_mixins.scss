@@ -4,19 +4,37 @@
   $font-small,
   $font-medium,
   $font-large,
-  $prop: font-size,
   $vw-small: 320px,
   $vw-medium: 768px,
   $vw-large: 1200px
 ) {
-  #{$prop}: $font-small;
+  font-size: $font-small;
 
   @media (min-width: $vw-medium) {
-    #{$prop}: $font-medium;
+    font-size: $font-medium;
   }
 
   @media (min-width: $vw-large) {
-    #{$prop}: $font-large;
+    font-size: $font-large;
+  }
+}
+
+@mixin width-media(
+  $small,
+  $medium,
+  $large,
+  $vw-small: 320px,
+  $vw-medium: 768px,
+  $vw-large: 1200px
+) {
+  width: $small;
+
+  @media (min-width: $vw-medium) {
+    width: $medium;
+  }
+
+  @media (min-width: $vw-large) {
+    width: $large;
   }
 }
 

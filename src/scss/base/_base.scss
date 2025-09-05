@@ -3,18 +3,17 @@
 @use "../abstracts/mixins" as *;
 
 html {
-  font-family: $font-family-body;
-  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-family-body;
+  font-weight: 500;
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
-  @include type-media($font-size-body-s, $font-size-body-m, $font-size-body-l);
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   @include theme-prop;
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  @include type-media($font-size-body-s, $font-size-body-m, $font-size-body-l);
 }
 
 h1 {
@@ -23,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.8em 0;
   @include type-media($font-size-h2-s, $font-size-h2-m, $font-size-h2-l);
 }
@@ -34,9 +33,9 @@ h2 {
 }
 
 a {
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   text-decoration: none;
   transition: text-shadow 1s ease;
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
 
   &:hover {
     text-shadow: $color-accent-prime 0 0 12px;
@@ -44,16 +43,6 @@ a {
   &.active {
     color: $color-accent-prime;
   }
-}
-
-button {
-  cursor: pointer;
-  border: 1px solid $color-download-button;
-  background: none;
-  color: $color-download-button;
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {

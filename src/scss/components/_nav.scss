@@ -3,19 +3,33 @@
 @use "../abstracts/mixins" as *;
 
 nav {
-  @include flex-items-position();
+  @include flex-items-position(row, space-between);
   @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  & svg {
+    cursor: pointer;
+    margin: 1em;
+    @include width-media(24px, 26px, 28px);
+  }
 }
 .nav__list {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 30px;
   width: 100%;
   padding: 1rem 0;
   text-align: center;
   display: none;
-  z-index: 2000;
-  @include type-media(16px, 18px, 20px);
+  border-radius: 100px;
+  @include theme-prop(
+    background-color,
+    $color-light-scheme-bg,
+    $color-dark-scheme-bg
+  );
+  @include type-media(18px, 18px, 20px);
+}
+
+.nav__list.active {
+  @include flex-items-position(column);
+  gap: 0.6em;
 }
 
 .nav__item-btn {
@@ -26,20 +40,27 @@ nav {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 2px 0px;
 }
 
-#menu-icon {
-  font-size: 3rem;
+.icon {
   display: none;
+}
+
+.icon.active {
+  display: block;
 }
 
 @media (min-width: 768px) {
   .nav__list {
     position: relative;
+    top: 0;
     display: flex;
     justify-content: space-around;
     padding: 0.6rem;
     width: 70%;
     margin: 0 auto;
     align-items: center;
-    z-index: 2000;
+  }
+
+  .menu-icon {
+    display: none;
   }
 }

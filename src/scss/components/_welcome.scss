@@ -7,6 +7,7 @@
 }
 
 .home-left {
+  gap: 3.2em;
   @include flex-items-position(column);
 }
 
@@ -19,7 +20,6 @@
 
 .paragraph {
   width: 280px;
-  margin-top: 60px;
   @include type-media(24px, 28px, 32px);
 }
 

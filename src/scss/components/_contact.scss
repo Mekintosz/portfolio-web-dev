@@ -1,5 +1,49 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .contact {
   @include panel;
+  @include flex-items-position(column);
+}
+
+.contact-details-title {
+  align-self: center;
+}
+
+.contact-item {
+  margin-bottom: 0.2em;
+  & svg {
+    width: 1.5em;
+    translate: 0 0.48em;
+  }
+}
+
+.input-group {
+  @include flex-items-position(column, center, start);
+  @include type-media(14px, 16px, 18px);
+}
+
+.contact-details {
+  width: 100%;
+}
+
+.contact-info {
+  padding: 1.2em;
+}
+
+form {
+  margin: 1em 0;
+  & input,
+  textarea {
+    caret-color: $color-download-button;
+    width: 100%;
+    background-color: $color-dark-scheme-fonts;
+    margin-bottom: 1em;
+    height: 2.6em;
+    font-size: 1.2em;
+    border-radius: 3px;
+  }
+  & textarea {
+    height: 6em;
+  }
 }

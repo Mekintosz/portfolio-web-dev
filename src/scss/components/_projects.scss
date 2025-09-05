@@ -33,7 +33,7 @@
   gap: 0.4em;
   @include flex-items-position(column);
   & svg {
-    @include type-media(18px, 20px, 22px, width);
+    width: 1em;
     @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   }
 }

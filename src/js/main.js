@@ -1,11 +1,14 @@
 const navLinks = document.querySelectorAll(".nav__item a");
-const menuIcon = document.querySelector("#menu-icon");
+const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.querySelector(".nav__list");
+const hamburger = document.getElementById("hamburger");
+const cross = document.getElementById("cross");
 
 export const navOpperations = () => {
-  menuIcon.addEventListener("click", () => {
-    menuIcon.classList.toggle("bx-x");
+  menuToggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
+    hamburger.classList.toggle("active");
+    cross.classList.toggle("active");
   });
 
   const activePage = () => {
@@ -13,7 +16,7 @@ export const navOpperations = () => {
       link.classList.remove("active");
     });
 
-    menuIcon.classList.remove("bx-x");
+    menuIcons.classList.remove("bx-x");
     navbar.classList.remove("active");
   };
 

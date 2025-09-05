@@ -1,6 +1,9 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 footer {
+  font-weight: 100;
+  color: $color-accent-prime;
   @include flex-items-position();
   padding-bottom: 1.6em;
 }

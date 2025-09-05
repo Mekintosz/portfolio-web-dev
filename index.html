@@ -21,7 +21,78 @@
   <body>
     <header>
       <nav class="nav panel-content">
-        <i class="bx bx-menu" id="menu-icon"></i>
+        <div id="menu-toggle" class="menu-icon">
+          <svg
+            id="hamburger"
+            class="icon active"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="40"
+              y1="128"
+              x2="216"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="64"
+              x2="216"
+              y2="64"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="192"
+              x2="216"
+              y2="192"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+          <svg
+            id="cross"
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="200"
+              y1="56"
+              x2="56"
+              y2="200"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="200"
+              y1="200"
+              x2="56"
+              y2="56"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+        </div>
+
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#projects">PROJECTS</a>
@@ -39,52 +110,123 @@
           </li>
         </ul>
         <div class="logo-section"></div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="rgb(206, 215, 227)"
-          viewBox="0 0 256 256"
-        >
-          <path
-            d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"
-          ></path>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="32"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <circle
+            cx="128"
+            cy="128"
+            r="56"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="64"
+            y1="64"
+            x2="56"
+            y2="56"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="64"
+            y1="192"
+            x2="56"
+            y2="200"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="192"
+            y1="64"
+            x2="200"
+            y2="56"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="192"
+            y1="192"
+            x2="200"
+            y2="200"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="40"
+            y1="128"
+            x2="32"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="128"
+            y1="216"
+            x2="128"
+            y2="224"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            x1="216"
+            y1="128"
+            x2="224"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
         </svg>
       </nav>
     </header>
     <section class="home" id="home">
       <div class="welcome panel-content">
         <div class="home-left">
-          <p class="home-name">Michał Łazicki</p>
-          <p class="subtitle">Front-end Developer</p>
           <div>
-            <p class="paragraph">
-              Create beautiful and engaging websites with latest technologies.
-            </p>
+            <p class="home-name">Michał Łazicki</p>
+            <p class="subtitle">Front-end Developer</p>
           </div>
+          <button>Download CV</button>
+          <p class="paragraph">
+            Create beautiful and engaging websites with latest technologies.
+          </p>
         </div>
         <div class="panel-content home-right"></div>
       </div>
-      <!-- <nav class="panel-content side-nav">
-        <a
-          class="side-nav__btn"
-          href="https://github.com/Mekintosz?tab=repositories"
-          target="_blank"
-          ><img src="./src/assets/GitHub_Invertocat_Dark.png" alt="GitHub"
-        /></a>
-        <a
-          class="side-nav__btn"
-          href="https://linkedin.com/in/michał-łazicki-0872b92a"
-          target="_blank"
-          ><img src="./src/assets/linkedin-logo.png" alt="LinkedIn"
-        /></a>
-        <a
-          class="side-nav__btn"
-          href="./src/assets/CV Michał Łazicki.pdf"
-          download
-          ><img src="./src/assets/file.png" alt="CV"
-        /></a>
-      </nav> -->
     </section>
     <main>
       <section class="panel-content about section-narrow" id="about">
@@ -619,41 +761,107 @@
             <li class="skills-item">Figma</li>
             <li class="skills-item">Webpack</li>
             <li class="skills-item">CLI</li>
-            <li class="skills-item">VSCode</li>
+            <li class="skills-item">vs Code</li>
+            <li class="skills-item">Sass</li>
           </ul>
         </div>
       </section>
-      <section class="section-wide" id="contact">
+      <section class="" id="contact">
         <div class="panel-content contact">
+          <h1 class="contact-details-title">Contact</h1>
           <div class="contact-details">
             <ul class="contact-info">
-              <h1 class="contact-details-title">Contact</h1>
               <li class="contact-item">
-                <img
-                  class="icon-contact"
-                  src="./src/assets/envelope-open.png"
-                  alt="open envelope"
-                />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="14"
+                  />
+                  <polyline
+                    points="224 56 128 144 32 56"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                </svg>
                 <a href="mailto:michal.lazicki@gmail.com.com" class="email"
-                  >michal.lazicki@gmail.com</a
-                >
+                  >michal.lazicki@gmail.com
+                </a>
               </li>
               <li class="contact-item">
-                <img
-                  class="icon-contact"
-                  src="./src/assets/phone.png"
-                  alt="open envelope"
-                />+48 579 526 080
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="14"
+                  />
+                </svg>
+                +48 579 526 080
               </li>
               <li class="contact-item">
-                <a
-                  class="side-nav__btn"
-                  href="https://github.com/Mekintosz?tab=repositories"
-                  target="_blank"
-                  ><img
-                    src="./src/assets/GitHub_Invertocat_Dark.png"
-                    alt="GitHub"
-                /></a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <path
+                    d="M80,168V144a16,16,0,0,1,16-16h88a16,16,0,0,0,16-16V88"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <line
+                    x1="80"
+                    y1="88"
+                    x2="80"
+                    y2="168"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <circle
+                    cx="80"
+                    cy="64"
+                    r="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <circle
+                    cx="200"
+                    cy="64"
+                    r="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <circle
+                    cx="80"
+                    cy="192"
+                    r="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="14"
+                  />
+                </svg>
                 <a
                   href="https://github.com/Mekintosz?tab=repositories"
                   target="_blank"
@@ -661,12 +869,52 @@
                 >
               </li>
               <li class="contact-item">
-                <a
-                  class="side-nav__btn"
-                  href="https://linkedin.com/in/michał-łazicki-0872b92a"
-                  target="_blank"
-                  ><img src="./src/assets/linkedin-logo.png" alt="LinkedIn"
-                /></a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <rect
+                    x="32"
+                    y="32"
+                    width="192"
+                    height="192"
+                    rx="8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="14"
+                  />
+                  <line
+                    x1="120"
+                    y1="112"
+                    x2="120"
+                    y2="176"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <line
+                    x1="88"
+                    y1="112"
+                    x2="88"
+                    y2="176"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <path
+                    d="M120,140a28,28,0,0,1,56,0v36"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  />
+                  <circle cx="88" cy="84" r="12" />
+                </svg>
                 <a
                   href="https://linkedin.com/in/michał-łazicki-0872b92a"
                   target="_blank"
@@ -678,31 +926,17 @@
               <div class="input-super-group">
                 <div class="input-group small-input">
                   <label class="namme-input" for="name">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                  />
+                  <input type="text" name="name" placeholder="" required />
                 </div>
                 <div class="input-group small-input">
                   <label class="email-input" for="email">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your email address"
-                    required
-                  />
+                  <input type="email" name="email" placeholder="" required />
                 </div>
               </div>
               <div class="input-group">
                 <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  placeholder="Your message, when finished pleas press send"
-                  required
-                ></textarea>
-                <button class="form-btn" type="submit">Send</button>
+                <textarea name="message" placeholder="" required></textarea>
+                <button class="form-btn" type="submit">Send message</button>
               </div>
             </form>
           </div>
@@ -710,8 +944,7 @@
       </section>
     </main>
     <footer>
-      <span class="footnote">Designed and developed by </span
-      ><span class="foot-name">Michał Łazicki</span>
+      <span class="footnote">Designed and developed by Michał Łazicki</span>
     </footer>
   </body>
 </html>

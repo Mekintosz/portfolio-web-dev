@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+button {
+  cursor: pointer;
+  border: 1px solid $color-download-button;
+  background: none;
+  color: $color-download-button;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  transition: box-shadow 0.6s ease, text-shadow 0.6s ease;
+
+  &:hover {
+    box-shadow: $color-download-button 0 0 9px;
+    text-shadow: $color-download-button 0 0 12px;
+  }
+}
