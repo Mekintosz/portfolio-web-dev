@@ -47,3 +47,21 @@ form {
     height: 6em;
   }
 }
+
+@media (min-width: 768px) {
+  .contact-details-title {
+    align-self: start;
+  }
+
+  .input-super-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    & div {
+      width: 100%;
+    }
+  }
+  .contact {
+    padding: 2em;
+  }
+}

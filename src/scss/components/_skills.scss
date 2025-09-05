@@ -4,8 +4,9 @@
   display: grid;
   padding: 2em 2em 0;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1.3em;
+  gap: 1.5em;
   grid-template-rows: auto;
+  align-items: center;
 }
 
 .skills-item {

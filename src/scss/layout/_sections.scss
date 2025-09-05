@@ -34,3 +34,14 @@ section {
 .section-wide {
   @include flex-items-position(column);
 }
+
+@media (min-width: 768px) {
+  .panel-content {
+    padding: 0 10%;
+    margin-bottom: 3em;
+  }
+
+  .section-wide {
+    padding: 0 3%;
+  }
+}

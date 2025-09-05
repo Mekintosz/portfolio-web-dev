@@ -37,3 +37,10 @@
     @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   }
 }
+
+@media (min-width: 768px) {
+  .project {
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+}
