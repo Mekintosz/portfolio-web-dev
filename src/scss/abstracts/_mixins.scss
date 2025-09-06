@@ -60,7 +60,7 @@
 
 @mixin panel {
   border: 1px solid $color-accent-prime;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0.6em;
 
   @media (min-width: 768px) {
@@ -68,6 +68,6 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 2.4em;
+    padding: 1.8em;
   }
 }

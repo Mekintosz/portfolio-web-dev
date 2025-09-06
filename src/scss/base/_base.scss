@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   font-weight: 500;
-  margin: 0.8em 0;
+  margin-bottom: 0.8em;
   @include type-media($font-size-h2-s, $font-size-h2-m, $font-size-h2-l);
 }
 

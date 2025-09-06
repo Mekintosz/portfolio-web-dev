@@ -9,7 +9,9 @@ nav {
   width: 100%;
   @include flex-items-position(row, space-between);
   @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
-  & svg {
+
+  & .menu-icon svg,
+  .theme-toggle svg {
     cursor: pointer;
     margin: 0.4em;
     @include width-media(24px, 26px, 28px);
@@ -56,13 +58,22 @@ nav {
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0.6rem;
-    width: 70%;
+    padding: 1.2rem 0;
+    width: 80%;
     margin: 0 auto;
     align-items: center;
   }
 
   .menu-icon {
     display: none;
+  }
+
+  nav {
+    & .theme-toggle svg {
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: 0.3rem;
+    }
   }
 }

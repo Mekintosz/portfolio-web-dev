@@ -10,6 +10,8 @@
 .home-name {
   font-family: $font-family-heading;
   white-space: nowrap;
+
+  margin-left: -0.06em;
   @include type-media(40px, 48px, 64px);
 }
 
@@ -21,6 +23,7 @@
 .subtitle {
   font-family: $font-family-heading;
   letter-spacing: 0.4em;
+  text-transform: uppercase;
   @include type-media(15px, 17px, 19px);
 }
 
@@ -58,10 +61,15 @@
       width: 94%;
     }
   }
+
+  .subtitle {
+    letter-spacing: 0.366em;
+  }
 }
+
 @media (min-width: 1200px) {
   .welcome {
-    padding: 0 15%;
+    padding: 0 10%;
   }
 
   .paragraph {
@@ -72,7 +80,11 @@
     flex: 1;
     @include flex-items-position(row, end);
     & img {
-      width: 66%;
+      width: 60%;
     }
+  }
+
+  .subtitle {
+    letter-spacing: 0.585em;
   }
 }
