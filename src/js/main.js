@@ -16,7 +16,6 @@ export const navOpperations = () => {
       link.classList.remove("active");
     });
 
-    menuIcons.classList.remove("bx-x");
     navbar.classList.remove("active");
   };
 

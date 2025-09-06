@@ -2,13 +2,14 @@
 @use "../base/typography" as *;
 
 .welcome {
-  height: 70vh;
+  height: 100vh;
   text-align: center;
   @include flex-items-position(column, center, center);
 }
 
 .home-name {
   font-family: $font-family-heading;
+  white-space: nowrap;
   @include type-media(40px, 48px, 64px);
 }
 
@@ -28,11 +29,16 @@
   @include type-media(24px, 28px, 32px);
 }
 
+.home-right {
+  & img {
+    margin-top: 10vh;
+    width: 60%;
+  }
+}
+
 @media (min-width: 768px) {
   .welcome {
-    height: 80vh;
-    padding-left: 10%;
-
+    padding: 0 10%;
     @include flex-items-position(row, start, center);
   }
 
@@ -45,9 +51,28 @@
   .paragraph {
     width: 320px;
   }
+
+  .home-right {
+    & img {
+      margin: 0 0 0 34px;
+      width: 94%;
+    }
+  }
 }
 @media (min-width: 1200px) {
   .welcome {
-    height: 90vh;
+    padding: 0 15%;
+  }
+
+  .paragraph {
+    width: 360px;
+  }
+
+  .home-right {
+    flex: 1;
+    @include flex-items-position(row, end);
+    & img {
+      width: 66%;
+    }
   }
 }
