@@ -61,6 +61,13 @@
 @mixin panel {
   border: 1px solid $color-accent-prime;
   border-radius: 6px;
-  margin: 0.8em;
-  padding: 1em;
+  padding: 0.6em;
+
+  @media (min-width: 768px) {
+    padding: 1.2em;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2.4em;
+  }
 }

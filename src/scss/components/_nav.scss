@@ -3,22 +3,28 @@
 @use "../abstracts/mixins" as *;
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   @include flex-items-position(row, space-between);
   @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   & svg {
     cursor: pointer;
-    margin: 1em;
+    margin: 0.4em;
     @include width-media(24px, 26px, 28px);
   }
 }
 .nav__list {
   position: absolute;
-  top: 30px;
+  top: 42px;
   width: 100%;
-  padding: 1rem 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
   text-align: center;
-  display: none;
-  border-radius: 100px;
+
+  transition: max-height 0.4s ease, padding 0.4s ease;
   @include theme-prop(
     background-color,
     $color-light-scheme-bg,
@@ -28,8 +34,13 @@ nav {
 }
 
 .nav__list.active {
-  @include flex-items-position(column);
-  gap: 0.6em;
+  max-height: 280px;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid $color-accent-prime;
+}
+
+.nav__item {
+  padding: 0.6rem 0;
 }
 
 .icon {

@@ -2,8 +2,9 @@
 @use "../abstracts/variables" as *;
 
 .contact {
-  @include panel;
+  margin: 0 2%;
   @include flex-items-position(column);
+  @include panel;
 }
 
 .contact-details-title {
@@ -46,6 +47,10 @@ form {
   & textarea {
     height: 6em;
   }
+  & button {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -63,5 +68,24 @@ form {
   }
   .contact {
     padding: 2em;
+    margin: 0 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    margin: 0 13%;
+  }
+
+  .contact-details {
+    display: flex;
+    & form {
+      width: 100%;
+    }
+  }
+  .contact-info {
+    padding: 0;
+    margin: 3em;
+    width: 40%;
   }
 }

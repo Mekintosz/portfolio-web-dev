@@ -32,16 +32,33 @@ section {
 }
 
 .section-wide {
+  padding: 0 2%;
   @include flex-items-position(column);
 }
 
 @media (min-width: 768px) {
-  .panel-content {
+  .section-narrow {
     padding: 0 10%;
-    margin-bottom: 3em;
+  }
+
+  section {
+    margin-bottom: 2.6rem;
+  }
+  .section-wide {
+    padding: 0 3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    margin-bottom: 4.2rem;
+  }
+
+  .section-narrow {
+    padding: 0 23%;
   }
 
   .section-wide {
-    padding: 0 3%;
+    padding: 0 15%;
   }
 }

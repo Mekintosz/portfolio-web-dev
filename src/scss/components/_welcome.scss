@@ -30,7 +30,7 @@
 
 @media (min-width: 768px) {
   .welcome {
-    height: 70vh;
+    height: 80vh;
     padding-left: 10%;
 
     @include flex-items-position(row, start, center);
@@ -44,5 +44,10 @@
 
   .paragraph {
     width: 320px;
+  }
+}
+@media (min-width: 1200px) {
+  .welcome {
+    height: 90vh;
   }
 }
