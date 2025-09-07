@@ -10,10 +10,14 @@ body {
   font-family: $font-family-body;
   font-weight: 500;
   line-height: 1.5;
-  transition: background-color 0.3s ease, color 0.3s ease;
   @include theme-prop;
   @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
   @include type-media($font-size-body-s, $font-size-body-m, $font-size-body-l);
+}
+
+.bg-swap {
+  @include theme-prop;
+  transition: background-color 1.2s ease;
 }
 
 h1 {
@@ -35,7 +39,6 @@ h2 {
 a {
   text-decoration: none;
   transition: text-shadow 0.4s ease;
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
 
   &:hover {
     text-shadow: $color-accent-prime 0 0 12px;

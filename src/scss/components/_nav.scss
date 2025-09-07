@@ -8,7 +8,6 @@ nav {
   left: 0;
   width: 100%;
   @include flex-items-position(row, space-between);
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
 
   & .menu-icon svg,
   .theme-toggle svg {
@@ -17,6 +16,11 @@ nav {
     @include width-media(24px, 26px, 28px);
   }
 }
+
+nav.nav {
+  box-shadow: none;
+}
+
 .nav__list {
   position: absolute;
   top: 32px;
@@ -25,12 +29,13 @@ nav {
   overflow: hidden;
   padding: 0;
   text-align: center;
-  transition: max-height 0.4s ease, padding 0.4s ease;
   @include theme-prop(
     background-color,
     $color-light-scheme-bg,
     $color-dark-scheme-bg
   );
+  transition: background-color 1.2s ease, max-height 0.8s ease,
+    padding 0.8s ease;
   @include type-media(18px, 18px, 20px);
 }
 

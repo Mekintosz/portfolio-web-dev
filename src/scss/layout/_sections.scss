@@ -3,20 +3,22 @@
 @use "../abstracts/mixins" as *;
 
 section {
-  margin-bottom: 1.6em;
-  @include theme-prop();
-  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  padding-bottom: 1.6em;
 }
 
 .panel-content {
+  @include theme-prop(box-shadow, $box-shadow-bright, $box-shadow-dark);
   @include theme-prop(
     background-color,
     $color-light-scheme-bg,
     $color-dark-scheme-bg
   );
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+  transition: background-color 1.2s ease, color 1.2s ease;
 }
 
 .section-narrow {
+  margin-bottom: 1.6em;
   @include flex-items-position(column);
   border-top: 1px solid $color-accent-prime;
   border-bottom: 1px solid $color-accent-prime;
@@ -33,36 +35,42 @@ section {
 
 .section-wide {
   padding: 0 2%;
+  margin-bottom: 1.6em;
   @include flex-items-position(column);
 }
 
 @media (min-width: 768px) {
   .section-narrow {
     padding: 0 10%;
+    margin-bottom: 2.6em;
   }
 
   .section-narrow-content {
     text-align: left;
   }
 
-  section {
-    margin-bottom: 2.6rem;
-  }
   .section-wide {
     padding: 0 3%;
+    margin-bottom: 2.6em;
+  }
+
+  section {
+    padding-bottom: 2.6em;
   }
 }
 
 @media (min-width: 1200px) {
-  section {
-    margin-bottom: 4.2rem;
-  }
-
   .section-narrow {
     padding: 0 27%;
+    margin-bottom: 4.2em;
   }
 
   .section-wide {
     padding: 0 10%;
+    margin-bottom: 4.2em;
+  }
+
+  section {
+    padding-bottom: 4.2em;
   }
 }

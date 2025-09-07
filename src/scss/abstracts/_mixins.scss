@@ -71,3 +71,13 @@
     padding: 1.8em;
   }
 }
+
+// Mixin to add a transition without overwriting
+@mixin add-transition($transition...) {
+  // If the element already has a transition, append new one
+  transition: #{if(
+      transition != null,
+      transition + ", " + $transition,
+      $transition
+    )};
+}
