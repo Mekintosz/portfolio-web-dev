@@ -26,6 +26,9 @@
 
 .contact-details {
   width: 100%;
+  & img {
+    display: none;
+  }
 }
 
 .contact-info {
@@ -53,6 +56,10 @@ form {
   }
 }
 
+.cage {
+  display: flex;
+}
+
 @media (min-width: 768px) {
   .contact-details-title {
     align-self: start;
@@ -70,6 +77,16 @@ form {
     padding: 2em;
     margin: 0 2%;
   }
+
+  .contact-details img {
+    display: block;
+    height: fit-content;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    padding: 1.2em 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -82,10 +99,14 @@ form {
     & form {
       width: 100%;
     }
+
+    & img {
+      display: none;
+    }
   }
   .contact-info {
     padding: 0;
-    margin: 3em;
-    width: 40%;
+    width: 320px;
+    margin: 3em 6em 3em 0;
   }
 }

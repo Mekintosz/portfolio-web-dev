@@ -39,6 +39,41 @@ section {
   @include flex-items-position(column);
 }
 
+.project1-img {
+  @include theme-img(
+    "./src/assets/black-olives-dark.png",
+    "./src/assets/black-olives-light.png"
+  );
+}
+
+.project2-img {
+  @include theme-img(
+    "./src/assets/pogoda-app-dark.png",
+    "./src/assets/pogoda-app-light.png"
+  );
+}
+
+.project3-img {
+  @include theme-img(
+    "./src/assets/alex-kowalski-studio-dark.png",
+    "./src/assets/alex-kowalski-studio-light.png"
+  );
+}
+
+.project4-img {
+  @include theme-img(
+    "./src/assets/nasa-memory-game-dark.png",
+    "./src/assets/nasa-memory-game-light.png"
+  );
+}
+
+.project5-img {
+  @include theme-img(
+    "./src/assets/ocean-landing-page-dark.png",
+    "./src/assets/ocean-landing-page-light.png"
+  );
+}
+
 @media (min-width: 768px) {
   .section-narrow {
     padding: 0 10%;
