@@ -18,7 +18,11 @@ nav {
 }
 
 nav.nav {
-  box-shadow: none;
+  @include theme-prop(
+    box-shadow,
+    rgba(99, 99, 99, 0.3) 0px 2px 4px 0px,
+    $box-shadow-dark
+  );
 }
 
 .nav__list {

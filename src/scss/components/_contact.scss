@@ -12,6 +12,7 @@
 }
 
 .contact-item {
+  white-space: nowrap;
   margin-bottom: 0.2em;
   & svg {
     width: 1.5em;
@@ -108,5 +109,30 @@ form {
     padding: 0;
     width: 320px;
     margin: 3em 6em 3em 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .contact-details {
+    & img {
+      display: block;
+      height: fit-content;
+      padding: 0 14% 7% 0;
+      align-self: center;
+    }
+
+    & form {
+      width: 50%;
+    }
+  }
+
+  .contact-info {
+    padding: 0;
+    width: 320px;
+    margin: 3em 0 3em 0;
+  }
+
+  .cage {
+    flex: 1;
   }
 }
