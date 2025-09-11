@@ -5,14 +5,34 @@ export const toggleSetup = () => {
     const sun = document.getElementById("sun");
     const moon = document.getElementById("moon");
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      body.setAttribute("data-theme", savedTheme);
-    } else {
-      body.setAttribute("data-theme", "dark");
+    // === Vite: import all images from src/assets ===
+    const modules = import.meta.glob("../assets/*.{png,jpg,jpeg,webp}", {
+      eager: true,
+      import: "default",
+    });
+
+    const imageMap = {};
+    for (const path in modules) {
+      const fileName = path.split("/").pop(); // e.g. "black-olives-dark.png"
+      imageMap[fileName] = modules[path]; // hashed URL
     }
 
+    // === Load saved theme or default to dark ===
+    const savedTheme = localStorage.getItem("theme");
+    const initialTheme = savedTheme || "dark";
+    body.setAttribute("data-theme", initialTheme);
+
+    // === Set initial images based on theme ===
+    document.querySelectorAll(".project").forEach((project) => {
+      const img = project.querySelector("img.theme-img");
+      const darkFile = project.dataset.dark;
+      const lightFile = project.dataset.light;
+      const src =
+        initialTheme === "dark" ? imageMap[darkFile] : imageMap[lightFile];
+      if (src) img.src = src;
+    });
+
+    // === Handle toggle click ===
     toggleBtn.addEventListener("click", () => {
       const projects = document.querySelectorAll(".project");
       let currentTheme = body.getAttribute("data-theme") || "dark";
@@ -25,17 +45,18 @@ export const toggleSetup = () => {
 
       projects.forEach((project) => {
         const img = project.querySelector("img.theme-img");
+        const darkFile = project.dataset.dark;
+        const lightFile = project.dataset.light;
+        const newSrc =
+          newTheme === "dark" ? imageMap[darkFile] : imageMap[lightFile];
 
-        // Get the corresponding dark/light src from data attributes
-        const darkSrc = project.dataset.dark;
-        const lightSrc = project.dataset.light;
-        const newSrc = newTheme === "dark" ? darkSrc : lightSrc;
+        if (!newSrc) return;
 
-        // Fade out
+        // Fade out → swap → fade in
         img.classList.add("fade-out");
 
-        // After fade out, change src and fade back in
-        img.addEventListener("transitionend", function handler() {
+        img.addEventListener("transitionend", function handler(e) {
+          if (e.propertyName !== "opacity") return;
           img.src = newSrc;
           img.classList.remove("fade-out");
           img.removeEventListener("transitionend", handler);
