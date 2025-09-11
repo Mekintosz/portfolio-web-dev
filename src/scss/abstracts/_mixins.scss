@@ -50,12 +50,10 @@
   }
 }
 
-@mixin theme-img($dark, $light) {
-  content: url(#{$dark});
+@mixin theme-img() {
   box-shadow: $box-shadow-dark;
 
   [data-theme="light"] & {
-    content: url(#{$light});
     box-shadow: $box-shadow-bright;
   }
 }

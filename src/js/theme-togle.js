@@ -14,13 +14,33 @@ export const toggleSetup = () => {
     }
 
     toggleBtn.addEventListener("click", () => {
-      let currentTheme = body.getAttribute("data-theme") || "light";
+      const projects = document.querySelectorAll(".project");
+      let currentTheme = body.getAttribute("data-theme") || "dark";
       let newTheme = currentTheme === "light" ? "dark" : "light";
 
       sun.classList.toggle("active");
       moon.classList.toggle("active");
       body.setAttribute("data-theme", newTheme);
       localStorage.setItem("theme", newTheme);
+
+      projects.forEach((project) => {
+        const img = project.querySelector("img.theme-img");
+
+        // Get the corresponding dark/light src from data attributes
+        const darkSrc = project.dataset.dark;
+        const lightSrc = project.dataset.light;
+        const newSrc = newTheme === "dark" ? darkSrc : lightSrc;
+
+        // Fade out
+        img.classList.add("fade-out");
+
+        // After fade out, change src and fade back in
+        img.addEventListener("transitionend", function handler() {
+          img.src = newSrc;
+          img.classList.remove("fade-out");
+          img.removeEventListener("transitionend", handler);
+        });
+      });
     });
   });
 };
