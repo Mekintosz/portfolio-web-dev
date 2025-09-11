@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/port-favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio front-end web-dev</title>
+    <script type="module" crossorigin src="/portfolio-web-dev/assets/index-uLpM80rH.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-web-dev/assets/index-A8CCvb1Z.css">
+  </head>
+  <body>
+    <header class="bg-swap">
+      <nav class="nav panel-content">
+        <div id="menu-toggle" class="menu-icon">
+          <svg
+            id="hamburger"
+            class="icon active"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="40"
+              y1="128"
+              x2="216"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="64"
+              x2="216"
+              y2="64"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="192"
+              x2="216"
+              y2="192"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+          <svg
+            id="cross"
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="200"
+              y1="56"
+              x2="56"
+              y2="200"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="200"
+              y1="200"
+              x2="56"
+              y2="56"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#projects">PROJECTS</a>
+          </li>
+          <li class="nav__item"><a href="#about">ABOUT</a></li>
+          <li class="nav__item"><a href="#skills">SKILLS</a></li>
+          <li class="nav__item"><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div id="theme-toggle" class="theme-toggle">
+          <svg
+            id="moon"
+            class="moon icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <path
+              d="M108.11,28.11A96.09,96.09,0,0,0,227.89,147.89,96,96,0,1,1,108.11,28.11Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+          <svg
+            id="sun"
+            class="sun icon active"
+            nxmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none" />
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="32"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <circle
+              cx="128"
+              cy="128"
+              r="56"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="64"
+              y1="64"
+              x2="56"
+              y2="56"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="64"
+              y1="192"
+              x2="56"
+              y2="200"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="192"
+              y1="64"
+              x2="200"
+              y2="56"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="192"
+              y1="192"
+              x2="200"
+              y2="200"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="40"
+              y1="128"
+              x2="32"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="128"
+              y1="216"
+              x2="128"
+              y2="224"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+            <line
+              x1="216"
+              y1="128"
+              x2="224"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <section class="home bg-swap" id="home">
+      <div class="welcome panel-content">
+        <div class="home-left">
+          <div>
+            <span class="home-name">Michał Łazicki</span>
+            <p class="subtitle">Front-end Developer</p>
+          </div>
+          <button>Download CV</button>
+          <p class="paragraph">
+            Create beautiful and engaging websites with latest technologies.
+          </p>
+        </div>
+        <div class="home-right">
+          <img src="/portfolio-web-dev/assets/binary-t7AINTIp.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <main class="bg-swap">
+      <section class="panel-content about section-narrow" id="about">
+        <div class="section-narrow-content">
+          <h1 class="about-heading">About</h1>
+          <p class="introduction-body">
+            I'm a front-end developer who enjoys building simple, user-friendly
+            websites and learning how the web works behind the scenes. I started
+            with basic HTML and CSS, then moved on to JavaScript and React, and
+            now I'm constantly exploring new things to improve my skills. I like
+            combining design and code to make things that not only look good but
+            actually work well. I'm motivated, curious, and always trying to get
+            better – and this portfolio is part of that journey.
+          </p>
+        </div>
+      </section>
+      <section class="section-wide" id="projects">
+        <div class="projects-heading panel-content"><h1>Projects</h1></div>
+        <div class="projects">
+          <div class="panel-content project reverse">
+            <div class="project-info">
+              <h2 class="project-title">
+                Black Olives — Responsive Restaurant Website
+              </h2>
+              <p class="project-about">
+                A mobile-first, single-page restaurant site built with semantic
+                HTML, CSS Grid/Flexbox, and smooth anchor navigation. Features
+                include a table booking form with input validation, an email
+                subscription form, and optimized images for fast loading. Fully
+                responsive across devices, combining polished design with clean,
+                maintainable code.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">HTML</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">JavaScript</li>
+                <li class="techstack-item">Figma</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://mekintosz.github.io/black-olives/"
+                  target="_blank"
+                  ><div>
+                    <span>Visit app's page </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg></div
+                ></a>
+                <a
+                  href="https://github.com/Mekintosz/black-olives/"
+                  target="_blank"
+                  ><div>
+                    <span>App's GitHub page</span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <img
+              class="project1-img"
+              alt="screen shot of Black Olives webpage"
+            />
+          </div>
+          <div class="panel-content project">
+            <div class="project-info">
+              <h2 class="project-title">Pogoda App</h2>
+              <p class="project-about">
+                A weather app powered by an API provides a weather forecast in
+                any given location around the world. Has an option to toggle
+                temperatures between Celsius and Fahrenheit.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">JavaScript</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">API</li>
+                <li class="techstack-item">Webpack</li>
+                <li class="techstack-item">Figma</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://mekintosz.github.io/pogoda/" target="_blank"
+                  ><div>
+                    <span>Visit app's page </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg></div
+                ></a>
+                <a href="https://github.com/Mekintosz/pogoda" target="_blank"
+                  ><div>
+                    <span>App's GitHub page </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <img class="project2-img" alt="screen shot of the app" />
+          </div>
+          <div class="panel-content project reverse">
+            <div class="project-info">
+              <h2 class="project-title">Alex Kowalski Studio</h2>
+              <p class="project-about">
+                Single-page portfolio site for an earthenware and clay works
+                studio. The site is fully responsive and built with HTML and
+                CSS. The design template was provided by The Odin Project and
+                then redesigned to fit the fake client's expectations and needs.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">HTML</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">Figma</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://mekintosz.github.io/Alex-Kowalski-Studio/"
+                  target="_blank"
+                  ><div>
+                    <span>Visit app's page </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg></div
+                ></a>
+                <a
+                  href="https://github.com/Mekintosz/Alex-Kowalski-Studio"
+                  target="_blank"
+                  ><div>
+                    <span>App's GitHub page </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <img class="project3-img" alt="" />
+          </div>
+          <div class="panel-content project">
+            <div class="project-info">
+              <h2 class="project-title">NASA Memory Game</h2>
+
+              <p class="project-about">
+                Click on every image only once to display new round of photos.
+                The app is build with React, Vite and uses GitHub Actions for
+                deployment to gh-pages. API from nasa domain is being fetched to
+                load image URLs.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">React</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">API</li>
+                <li class="techstack-item">Vite</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://mekintosz.github.io/memory-card/"
+                  target="_blank"
+                  ><div>
+                    <span>Visit app's page (only large screen) </span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/Mekintosz/memory-card"
+                  target="_blank"
+                  >App's GitHub page
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <polyline
+                      points="120 200 119.99 136.01 56 136"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <line
+                      x1="40"
+                      y1="216"
+                      x2="120"
+                      y2="136"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <path
+                      d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img class="project4-img" alt="" />
+          </div>
+          <div class="panel-content project reverse">
+            <div class="project-info">
+              <h2 class="project-title">Ocean</h2>
+              <p class="project-about">
+                Responsive to all devices landing page with contact form. All
+                things about Ocean portal webpage.
+              </p>
+              <ul class="techstack-list">
+                <li class="techstack-item">HTML</li>
+                <li class="techstack-item">CSS</li>
+                <li class="techstack-item">Javascript</li>
+              </ul>
+              <div class="project-links">
+                <div>
+                  <a
+                    href="https://mekintosz.github.io/Ocean-landing-page/"
+                    target="_blank"
+                    >Visit apps site
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 256 256"
+                    >
+                      <rect width="256" height="256" fill="none" />
+                      <polyline
+                        points="120 200 119.99 136.01 56 136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <line
+                        x1="40"
+                        y1="216"
+                        x2="120"
+                        y2="136"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <a
+                  href="https://github.com/Mekintosz/Ocean-landing-page"
+                  target="_blank"
+                  >App's GitHub page
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <polyline
+                      points="120 200 119.99 136.01 56 136"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <line
+                      x1="40"
+                      y1="216"
+                      x2="120"
+                      y2="136"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <path
+                      d="M160,184h48a8,8,0,0,0,8-8V48a8,8,0,0,0-8-8H80a8,8,0,0,0-8,8V96"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img class="project5-img" alt="Ocean landing page" />
+          </div>
+        </div>
+      </section>
+      <section class="panel-content skills section-narrow" id="skills">
+        <div class="section-narrow-content">
+          <h1 class="skills-heading">Skills</h1>
+          <p class="skills-about">
+            Through on line courses and self study I have gained solid
+            understanding of full life cycle of web applications. My skills
+            enable me to deliver enjoyable experiences to users.
+          </p>
+          <ul class="skills-list">
+            <li class="skills-item">JavaScript</li>
+            <li class="skills-item">HTML</li>
+            <li class="skills-item">CSS</li>
+            <li class="skills-item">React</li>
+            <li class="skills-item">Jest</li>
+            <li class="skills-item">Git</li>
+            <li class="skills-item">GitHub</li>
+            <li class="skills-item">Figma</li>
+            <li class="skills-item">Webpack</li>
+            <li class="skills-item">CLI</li>
+            <li class="skills-item">vsCode</li>
+            <li class="skills-item">Sass</li>
+          </ul>
+        </div>
+      </section>
+      <section class="" id="contact">
+        <div class="panel-content contact">
+          <h1 class="contact-details-title">Contact</h1>
+          <div class="contact-details">
+            <div class="cage">
+              <ul class="contact-info">
+                <li class="contact-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path
+                      d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="14"
+                    />
+                    <polyline
+                      points="224 56 128 144 32 56"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                  </svg>
+                  <a href="mailto:michal.lazicki@gmail.com.com" class="email"
+                    >michal.lazicki@gmail.com
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path
+                      d="M164.39,145.34a8,8,0,0,1,7.59-.69l47.16,21.13a8,8,0,0,1,4.8,8.3A48.33,48.33,0,0,1,176,216,136,136,0,0,1,40,80,48.33,48.33,0,0,1,81.92,32.06a8,8,0,0,1,8.3,4.8l21.13,47.2a8,8,0,0,1-.66,7.53L89.32,117a7.93,7.93,0,0,0-.54,7.81c8.27,16.93,25.77,34.22,42.75,42.41a7.92,7.92,0,0,0,7.83-.59Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="14"
+                    />
+                  </svg>
+                  +48 579 526 080
+                </li>
+                <li class="contact-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path
+                      d="M80,168V144a16,16,0,0,1,16-16h88a16,16,0,0,0,16-16V88"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <line
+                      x1="80"
+                      y1="88"
+                      x2="80"
+                      y2="168"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <circle
+                      cx="80"
+                      cy="64"
+                      r="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <circle
+                      cx="200"
+                      cy="64"
+                      r="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <circle
+                      cx="80"
+                      cy="192"
+                      r="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="14"
+                    />
+                  </svg>
+                  <a
+                    href="https://github.com/Mekintosz?tab=repositories"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <rect
+                      x="32"
+                      y="32"
+                      width="192"
+                      height="192"
+                      rx="8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="14"
+                    />
+                    <line
+                      x1="120"
+                      y1="112"
+                      x2="120"
+                      y2="176"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <line
+                      x1="88"
+                      y1="112"
+                      x2="88"
+                      y2="176"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <path
+                      d="M120,140a28,28,0,0,1,56,0v36"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="16"
+                    />
+                    <circle cx="88" cy="84" r="12" />
+                  </svg>
+                  <a
+                    href="https://linkedin.com/in/michał-łazicki-0872b92a"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+              <img src="/portfolio-web-dev/assets/binar2-Dd3MoOW0.png" alt="binary cone image" />
+            </div>
+
+            <form action="https://formspree.io/f/mwpqrdko" method="POST">
+              <div class="input-super-group">
+                <div class="input-group small-input">
+                  <label class="namme-input" for="name">Name</label>
+                  <input type="text" name="name" placeholder="" required />
+                </div>
+                <div class="input-group small-input">
+                  <label class="email-input" for="email">Email</label>
+                  <input type="email" name="email" placeholder="" required />
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="" required></textarea>
+                <button class="form-btn" type="submit">Send message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-swap">
+      <span class="footnote"
+        >Designed and developed by Michał Łazicki @ 2025</span
+      >
+    </footer>
+  </body>
+</html>
