@@ -11,11 +11,11 @@
       rel="stylesheet"
     />
     <title>Portfolio front-end web-dev</title>
-    <script type="module" crossorigin src="/portfolio-web-dev/assets/index-Bfmjc00_.js"></script>
+    <script type="module" crossorigin src="/portfolio-web-dev/assets/index-vE9WaFkn.js"></script>
     <link rel="stylesheet" crossorigin href="/portfolio-web-dev/assets/index-CYIOYm8b.css">
   </head>
   <body>
-    <header class="bg-swap">
+    <header id="home" class="bg-swap">
       <nav class="nav panel-content">
         <div id="menu-toggle" class="menu-icon">
           <svg
@@ -89,10 +89,11 @@
           </svg>
         </div>
         <ul class="nav__list">
+          <li class="nav__item"><a href="#home">HOME</a></li>
+          <li class="nav__item"><a href="#about">ABOUT</a></li>
           <li class="nav__item">
             <a href="#projects">PROJECTS</a>
           </li>
-          <li class="nav__item"><a href="#about">ABOUT</a></li>
           <li class="nav__item"><a href="#skills">SKILLS</a></li>
           <li class="nav__item"><a href="#contact">CONTACT</a></li>
         </ul>
@@ -229,7 +230,11 @@
             <span class="home-name">Michał Łazicki</span>
             <p class="subtitle">Front-end Developer</p>
           </div>
-          <button>Download CV</button>
+          <button
+            onclick="window.open('./public/CV Michał Łazicki.pdf', '_blank')"
+          >
+            Download CV
+          </button>
           <p class="paragraph">
             Create beautiful and engaging websites with latest technologies.
           </p>
