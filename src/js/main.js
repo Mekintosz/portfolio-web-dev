@@ -37,7 +37,7 @@ export const navOperations = () => {
 
     sections.forEach((section) => {
       const sectionTop =
-        section.offsetTop - navbarHeight - window.innerHeight / 3;
+        section.offsetTop - navbarHeight - window.innerHeight / 20;
       if (window.scrollY >= sectionTop) {
         current = section.id;
       }
@@ -55,7 +55,7 @@ export const navOperations = () => {
   //Scroll to section with 1/3 viewport offset
   const scrollToSection = (section) => {
     const targetScroll =
-      section.offsetTop - window.innerHeight / 3 - navbarHeight;
+      section.offsetTop - window.innerHeight / 8 - navbarHeight;
 
     window.scrollTo({ top: targetScroll, behavior: "smooth" });
   };
