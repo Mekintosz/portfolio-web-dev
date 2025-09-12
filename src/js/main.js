@@ -37,7 +37,7 @@ export const navOperations = () => {
 
     sections.forEach((section) => {
       const sectionTop =
-        section.offsetTop - window.innerHeight / 8 - navbarHeight - 10;
+        section.offsetTop - window.innerHeight / 8 - navbarHeight - 60;
       if (window.scrollY >= sectionTop) {
         current = section.id;
       }
