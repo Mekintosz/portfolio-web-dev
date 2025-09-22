@@ -22,7 +22,6 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          # choose a Node major version you use locally (18 or 20 etc.)
           node-version: "22"
           cache: "npm"
 
@@ -40,5 +39,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          cname: www.mlazicki.pl
           allow_empty_commit: false
           enable_jekyll: false
