@@ -3,7 +3,7 @@ export const downloadCV = () => {
   const base = import.meta.env.BASE_URL; // automatically handles subpath
 
   // PDF file path
-  const pdfPath = `${base}CV Michał Łazicki.pdf`;
+  const pdfPath = `${base}M. Łazicki Cv.pdf`;
 
   // Open PDF in a new tab
   document.getElementById("downloadBtn").addEventListener("click", () => {
