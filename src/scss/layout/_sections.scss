@@ -18,6 +18,7 @@ section {
 }
 
 .section-narrow {
+  padding: 0;
   margin-bottom: 1.6em;
   @include flex-items-position(column);
   border-top: 1px solid $color-accent-prime;
