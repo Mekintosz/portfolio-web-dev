@@ -57,7 +57,12 @@ scss/
 3. **Dodaj CSS custom properties** dla theme system
 4. **Zaimplementuj proper cleanup** dla event listeners
 
-**Długoterminowe:** 5. **Dodaj TypeScript** dla lepszego type safety 6. **Zaimplementuj testing** (Jest/Vitest) 7. **Dodaj performance monitoring** 8. **Zoptymalizuj obrazy** (WebP, lazy loading)
+**Długoterminowe:**
+
+5. **Dodaj TypeScript** dla lepszego type safety
+6. **Zaimplementuj testing** (Jest/Vitest)
+7. **Dodaj performance monitoring**
+8. **Zoptymalizuj obrazy** (WebP, lazy loading)
 
 **Ważne do poprawy**
 
