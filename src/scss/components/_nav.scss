@@ -88,3 +88,11 @@ nav.nav {
     }
   }
 }
+
+@media (min-width: 1200px) {
+  nav {
+    & .theme-toggle svg {
+      margin: 0.5rem;
+    }
+  }
+}
