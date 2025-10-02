@@ -23,6 +23,7 @@ export const toggleSetup = () => {
     body.setAttribute("data-theme", initialTheme);
 
     // === Set initial images based on theme ===
+    // Handle images in .project containers
     document.querySelectorAll(".project").forEach((project) => {
       const img = project.querySelector("img.theme-img");
       const darkFile = project.dataset.dark;
@@ -30,6 +31,17 @@ export const toggleSetup = () => {
       const src =
         initialTheme === "dark" ? imageMap[darkFile] : imageMap[lightFile];
       if (src) img.src = src;
+    });
+
+    // Handle standalone theme images (for project pages)
+    document.querySelectorAll("img.theme-img").forEach((img) => {
+      if (!img.closest(".project")) {
+        const darkFile = img.dataset.dark?.split("/").pop();
+        const lightFile = img.dataset.light?.split("/").pop();
+        const src =
+          initialTheme === "dark" ? imageMap[darkFile] : imageMap[lightFile];
+        if (src) img.src = src;
+      }
     });
 
     // === Handle toggle click ===
@@ -43,6 +55,7 @@ export const toggleSetup = () => {
       body.setAttribute("data-theme", newTheme);
       localStorage.setItem("theme", newTheme);
 
+      // Handle images in .project containers
       projects.forEach((project) => {
         const img = project.querySelector("img.theme-img");
         const darkFile = project.dataset.dark;
@@ -61,6 +74,28 @@ export const toggleSetup = () => {
           img.classList.remove("fade-out");
           img.removeEventListener("transitionend", handler);
         });
+      });
+
+      // Handle standalone theme images (for project pages)
+      document.querySelectorAll("img.theme-img").forEach((img) => {
+        if (!img.closest(".project")) {
+          const darkFile = img.dataset.dark?.split("/").pop();
+          const lightFile = img.dataset.light?.split("/").pop();
+          const newSrc =
+            newTheme === "dark" ? imageMap[darkFile] : imageMap[lightFile];
+
+          if (!newSrc) return;
+
+          // Fade out → swap → fade in
+          img.classList.add("fade-out");
+
+          img.addEventListener("transitionend", function handler(e) {
+            if (e.propertyName !== "opacity") return;
+            img.src = newSrc;
+            img.classList.remove("fade-out");
+            img.removeEventListener("transitionend", handler);
+          });
+        }
       });
     });
   });

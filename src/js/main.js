@@ -4,9 +4,11 @@ const navbar = document.querySelector(".nav__list");
 const hamburger = document.getElementById("hamburger");
 const cross = document.getElementById("cross");
 const sections = document.querySelectorAll("section[id]");
-const navbarHeight = navbar.offsetHeight;
+const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
 export const navOperations = () => {
+  // Return early if main navigation elements don't exist (e.g., on project pages)
+  if (!navbar || !menuToggle) return;
   // Toggle mobile navbar open/close
   const toggleNavbar = (forceClose = false) => {
     if (window.innerWidth < 768) {
