@@ -2,6 +2,9 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+h2 {
+  margin-bottom: 0.4em;
+}
 section {
   padding-bottom: 1.6em;
 }

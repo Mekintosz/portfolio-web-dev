@@ -1,7 +1,8 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-button {
+button,
+.button {
   cursor: pointer;
   border: 1px solid $color-download-button;
   background: none;
@@ -12,7 +13,7 @@ button {
   @include type-media(18px, 20px, 22px);
 
   &:hover {
-    box-shadow: $color-download-button 0 0 9px;
-    text-shadow: $color-download-button 0 0 12px;
+    box-shadow: $color-download-button 0 0 1px;
+    text-shadow: $color-download-button 0 0 1px;
   }
 }

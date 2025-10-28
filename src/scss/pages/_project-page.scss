@@ -1,0 +1,236 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+@use "../layout/sections" as *;
+
+// Project Hero Section (reuses home layout)
+.home-right img {
+  width: 100%;
+}
+
+.project-hero {
+  padding: 0;
+}
+
+.hero-content {
+  padding: 0;
+}
+
+.project-main-title {
+  font-family: $font-family-heading;
+  margin-bottom: 0.5em;
+  @include type-media(36px, 48px, 64px);
+}
+
+.project-tagline {
+  font-family: $font-family-heading;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  opacity: 0.8;
+  @include type-media(14px, 16px, 18px);
+}
+
+.hero-buttons,
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+// .btn-primary,
+// .btn-secondary {
+//   display: inline-block;
+//   padding: 1em 2em;
+//   border-radius: 50px;
+//   font-weight: 600;
+//   text-decoration: none;
+//   transition: all 0.3s ease;
+//   text-align: center;
+// }
+
+//
+
+.button {
+  background-color: rgba(255, 94, 91, 0.103);
+  [data-theme="dark"] & {
+    border: 1px solid $color-accent-prime;
+    color: $color-accent-prime;
+    background-color: rgba(255, 166, 0, 0.13);
+  }
+}
+
+// Deprecated showcase section (replaced by home-right image)
+.project-showcase {
+  display: none;
+}
+.showcase-img {
+  display: none;
+}
+
+// Project Description Sections
+.project-card {
+  @include panel;
+}
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9em;
+}
+
+.project-description {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project-description.col {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.features-list {
+  li {
+    margin-bottom: 0.2rem;
+    position: relative;
+    line-height: 1.5;
+  }
+}
+.chandso {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+}
+
+// Tech Stack Grid
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9em;
+}
+
+.tech-item {
+  padding: 0.4em;
+  border-radius: 8px;
+  @include flex-items-position(column);
+  @include theme-prop(
+    background-color,
+    rgba(0, 0, 0, 0.03),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  h3 {
+    margin-bottom: 0.3em;
+    color: $color-accent-prime;
+    font-size: 1em;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+    text-wrap: nowrap;
+  }
+}
+
+// Back Link
+.back-link {
+  font-weight: 600;
+  text-decoration: none;
+  @include theme-prop(color, $font-light-scheme, $font-dark-scheme);
+
+  &:hover {
+    color: $color-accent-prime;
+  }
+}
+
+// CTA Section
+.project-cta {
+  padding: 2em 2%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.cta-content {
+  padding: 3em 2em;
+  border-radius: 8px;
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin-bottom: 1em;
+    opacity: 0.8;
+  }
+}
+
+// Tablet and up
+@media (min-width: 768px) {
+  .project-hero {
+    padding: 0;
+  }
+
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  // .tech-stack-grid {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+
+  .project-showcase {
+    display: none;
+  }
+}
+
+// Desktop
+@media (min-width: 1200px) {
+  .project-hero {
+    padding: 0;
+  }
+
+  // .tech-stack-grid {
+  //   grid-template-columns: repeat(4, 1fr);
+  // }
+
+  .project-showcase {
+    display: none;
+  }
+
+  .project-cta {
+    padding: 3em 10%;
+  }
+}
+
+// Project sections grid
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0 2% 2em;
+}
+
+.project-card {
+  padding: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: 3fr 1fr;
+    gap: 1.2rem;
+    padding: 0 3% 2.6em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-grid {
+    grid-template-columns: 5fr 3fr;
+    gap: 1.4rem;
+    padding: 0 10% 4.2em;
+  }
+}
